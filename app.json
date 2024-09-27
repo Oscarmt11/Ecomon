@@ -1,0 +1,25 @@
+{
+  "id": "60c3b336-ee5d-47e6-8b98-593f17ade169",
+  "name": "EcomonV2",
+  "publisher": "TIP Data by Andreu Serra Sastre",
+  "version": "1.0.0.3",
+  "runtime": "10.0",
+  "target": "Cloud",
+  "application": "21.0.0.0",
+  "platform": "23.0.24552.0",
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true,
+    "applyToDevExtension": false
+  },
+  "features": [
+    "NOIMPLICITWITH"
+  ],
+  "idRanges": [
+    {
+      "from": 90100,
+      "to": 90149
+    }
+  ]
+}
