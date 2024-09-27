@@ -3,10 +3,10 @@
   "name": "EcomonV2",
   "publisher": "TIP Data by Andreu Serra Sastre",
   "version": "1.0.0.3",
-  "runtime": "10.0",
+  "runtime": "13.0",
   "target": "Cloud",
-  "application": "21.0.0.0",
-  "platform": "23.0.24552.0",
+  "application": "22.0.0.0",
+  "platform": "21.0.0.0",
   "resourceExposurePolicy": {
     "allowDebugging": true,
     "allowDownloadingSource": true,
