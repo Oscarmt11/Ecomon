@@ -1,4 +1,4 @@
-pageextension 90106 CustomerList extends "Customer List"
+pageextension 90106 ECOCustomerList extends "Customer List"
 {
     layout
     {

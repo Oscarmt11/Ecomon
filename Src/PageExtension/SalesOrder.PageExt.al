@@ -1,4 +1,4 @@
-pageextension 90100 SalesOrder extends "Sales Order"
+pageextension 90100 ECOSalesOrder extends "Sales Order"
 {
     layout
     {

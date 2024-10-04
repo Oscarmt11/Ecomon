@@ -1,4 +1,4 @@
-pageextension 90101 SalesInvoice extends "Sales Invoice"
+pageextension 90101 ECOSalesInvoice extends "Sales Invoice"
 {
     layout
     {

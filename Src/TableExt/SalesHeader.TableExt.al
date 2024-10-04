@@ -1,4 +1,4 @@
-tableextension 90101 SalesHeader extends "Sales Header"
+tableextension 90101 ECOSalesHeader extends "Sales Header"
 {
     fields
     {
@@ -6,7 +6,7 @@ tableextension 90101 SalesHeader extends "Sales Header"
         {
             Caption = 'Código Responsable';
             DataClassification = ToBeClassified;
-            TableRelation = "Salesperson/Purchaser" where(Responsable=const(true));
+            TableRelation = "Salesperson/Purchaser" where(Responsable = const(true));
         }
         field(90101; "Código Segmentación"; Code[20])
         {
