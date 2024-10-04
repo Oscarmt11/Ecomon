@@ -2,8 +2,8 @@
   "id": "60c3b336-ee5d-47e6-8b98-593f17ade169",
   "name": "EcomonV2",
   "publisher": "TIP Data by Andreu Serra Sastre",
-  "version": "1.0.0.3",
-  "runtime": "13.0",
+  "version": "1.0.0.4",
+  "runtime": "12.2",
   "target": "Cloud",
   "application": "22.0.0.0",
   "platform": "21.0.0.0",
@@ -13,6 +13,20 @@
     "includeSourceInSymbolFile": true,
     "applyToDevExtension": false
   },
+  "dependencies": [
+        {                  
+            "id": "7a7d3479-e693-4f3d-8336-aac424523187",
+            "publisher": "Kuara Software",
+            "name": "EcomonKuara",
+            "version": "1.0.0.15"                   
+        },
+        {                  
+            "id": "3c5bfa68-d351-435e-8d5f-85efdba010c4",
+            "publisher": "NubIT Consulting",
+            "name": "Horus",
+            "version": "1.0.0.15"                   
+        }
+      ],
   "features": [
     "NOIMPLICITWITH"
   ],
