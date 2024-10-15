@@ -1,5 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:am="http://schemas.microsoft.com/sqlserver/reporting/authoringmetadata">
+  <am:AuthoringMetadata>
+    <am:CreatedBy>
+      <am:Name>MSRB</am:Name>
+      <am:Version>15.0.20283.0</am:Version>
+    </am:CreatedBy>
+    <am:UpdatedBy>
+      <am:Name>MSRB</am:Name>
+      <am:Version>15.0.20283.0</am:Version>
+    </am:UpdatedBy>
+    <am:LastModifiedTimestamp>2024-10-07T11:49:44.6206039Z</am:LastModifiedTimestamp>
+  </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="DataSource">
@@ -3014,7 +3025,7 @@ Cstr(Fields!SalesPurchPersonName.Value) , 1)</Hidden>
             </Textbox>
             <Image Name="DocumentSign">
               <Source>Database</Source>
-              <Value>=ReportItems!TxtDocumentSign_SalesShptHeader.Value</Value>
+              <Value>=Fields!SingTip.Value</Value>
               <MIMEType>image/png</MIMEType>
               <Sizing>FitProportional</Sizing>
               <Top>3.66697cm</Top>
@@ -3023,7 +3034,7 @@ Cstr(Fields!SalesPurchPersonName.Value) , 1)</Hidden>
               <Width>6.73355cm</Width>
               <ZIndex>7</ZIndex>
               <Visibility>
-                <Hidden>=iif(ISNOTHING(First(Fields!DocumentSign_SalesShptHeader.Value, "DataSet_Result")) = TRUE,true,false)</Hidden>
+                <Hidden>=iif(ISNOTHING(First(Fields!SingTip.Value, "DataSet_Result")) = TRUE,true,false)</Hidden>
               </Visibility>
               <Style>
                 <Border>
@@ -3527,6 +3538,9 @@ End Function
         </Field>
         <Field Name="Quantity1Format">
           <DataField>Quantity1Format</DataField>
+        </Field>
+        <Field Name="SingTip">
+          <DataField>SingTip</DataField>
         </Field>
       </Fields>
       <Query>

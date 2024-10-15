@@ -19,13 +19,13 @@
             "publisher": "Kuara Software",
             "name": "EcomonKuara",
             "version": "1.0.0.15"                   
-        },
-        {                  
-            "id": "3c5bfa68-d351-435e-8d5f-85efdba010c4",
-            "publisher": "NubIT Consulting",
-            "name": "Horus",
-            "version": "1.0.0.15"                   
-        }
+        }//,
+        // {                  
+        //     "id": "3c5bfa68-d351-435e-8d5f-85efdba010c4",
+        //     "publisher": "NubIT Consulting",
+        //     "name": "Horus",
+        //     "version": "1.0.0.15"                   
+        // }
       ],
   "features": [
     "NOIMPLICITWITH"

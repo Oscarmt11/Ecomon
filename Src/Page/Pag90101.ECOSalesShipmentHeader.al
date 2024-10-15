@@ -15,7 +15,7 @@ page 90101 ECOSalesShipmentHeader
                 {
                     ApplicationArea = all;
                 }
-                field(ECNSing; Rec.ECNSing)
+                field(ECNSinged; Rec.ECNSinged)
                 {
                     ApplicationArea = all;
                 }
