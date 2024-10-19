@@ -8,7 +8,7 @@ codeunit 90101 EcoSingMgt
     end;
 
     var
-        SalesShipmentHeader: Record "Sales Shipment Header";
+
 
     procedure InsertSing(ShippingNo: text[20]; SingNo: text; Observations: Text): text
     var
@@ -16,8 +16,10 @@ codeunit 90101 EcoSingMgt
         Base64: Codeunit "Base64 Convert";
         Outstr: OutStream;
         InStr: InStream;
+        SalesShipmentHeader: Record "Sales Shipment Header";
     begin
-        IF NOT SalesShipmentHeader.GET(ShippingNo) THEN
+        SalesShipmentHeader.SetRange("No.", ShippingNo);
+        IF NOT SalesShipmentHeader.FindFirst() THEN
             EXIT('Error: El albarán no existe');
 
         TempBlob.CreateOutStream(OutStr);
@@ -25,17 +27,26 @@ codeunit 90101 EcoSingMgt
         TempBlob.CreateInStream(InStr);
         SalesShipmentHeader.ECNSing.ImportStream(InStr, '*.png');
         SalesShipmentHeader.Validate(ECNSinged, true);
-        //SalesShipmentHeader.Validate(NUBObservations, Observations);        
-        SendSalesShipmentHeader(SalesShipmentHeader);
-        Commit();
-        SalesShipmentHeader.MODIFY(true);
+        SalesShipmentHeader.Validate(ECOObservations, Observations);
+        SalesShipmentHeader.CalcFields(ECOSendByemail);
+        if SalesShipmentHeader.ECOSendByemail then begin
+            if SendSalesShipmentHeader(SalesShipmentHeader) then begin
+                SalesShipmentHeader.SetRange("No.", ShippingNo);
+                IF SalesShipmentHeader.FindFirst() THEN begin
+                    SalesShipmentHeader.Validate(SalesShipmentHeader.ECNSEmailSent, true);
+                    SalesShipmentHeader.Validate(ECNEmailError, '');
+                    SalesShipmentHeader.Validate("ECNEmailSentDate", Today);
+                end;
+                Commit();
+                SalesShipmentHeader.MODIFY(true);
+            end;
+        end;
         EXIT('OK');
     end;
 
-    procedure SendSalesShipmentHeader(var SalesShipmentHeader: Record "Sales Shipment Header")
+    procedure SendSalesShipmentHeader(SalesShipmentHeaderParam: Record "Sales Shipment Header"): Boolean
     var
         SalesSetup: Record "Sales & Receivables Setup";
-        SalesShimpemntHeaderReport: Record "Sales Shipment Header";
         InfEmpresa: record "Company Information";
         Email: Codeunit Email;
         EmailMessage: Codeunit "Email Message";
@@ -52,24 +63,39 @@ codeunit 90101 EcoSingMgt
         if not SalesSetup.Get() then
             exit;
         SalesSetup.Get;
-        SalesShimpemntHeaderReport.Get(SalesShipmentHeader."No.");
-        SalesShimpemntHeaderReport.SetRange("No.", SalesShipmentHeader."No.");
-        recRef.GetTable(SalesShimpemntHeaderReport);
+        //SalesShimpemntHeaderReport.Get(DocumentNo);
+        SalesShipmentHeaderParam.SetRange("No.", SalesShipmentHeaderParam."No.");
+        recRef.GetTable(SalesShipmentHeaderParam);
         TempBlob.CreateOutStream(OutStr);
         if Report.SaveAs(Report::"Sales - Shipment - Ecomon", '', ReportFormat::Pdf, OutStr, recRef) then begin
             TempBlob.CreateInStream(InStr);
             Base64Result := BASE64.ToBase64(InStr, true);
             EmailMessage.Create('oscarmingte@gmail.com', 'prueba asunto', 'texto', true);
-            EmailMessage.AddAttachment(SalesShipmentHeader."No." + '.pdf', 'application/pdf', Base64Result);
-            if Email.Send(EmailMessage, Enum::"Email Scenario"::"Sales Order") then begin
-                SalesShipmentHeader.Validate(ECNSEmailSent, true);
-                SalesShipmentHeader.Validate("ECNEmailSentDate", Today);
-            end else
-                SalesShipmentHeader.Validate(ECNEmailError, GetLastErrorText());
-        end else
-            SalesShipmentHeader.Validate(ECNEmailError, GetLastErrorText());
-        Message(GetLastErrorText());
+            EmailMessage.AddAttachment(SalesShipmentHeaderParam."No." + '.pdf', 'application/pdf', Base64Result);
+            if Email.Send(EmailMessage, Enum::"Email Scenario"::"Sales Order") then
+                exit(true);
+        end;
+    end;
 
+    procedure GetPdfbase64Shipment(ShippingNo: text[20]): Text
+    var
+        FileManagment: codeunit "File Management";
+        BASE64: Codeunit "Base64 Convert";
+        inst: InStream;
+        recRef: RecordRef;
+        InStr: Instream;
+        OutStr: OutStream;
+        TempBlob: Codeunit "Temp Blob";
+        SalesShipmentHeaderParam, salesShipment2 : Record "Sales Shipment Header";
+    begin
+        SalesShipmentHeaderParam.SetRange("No.", ShippingNo);
+        if SalesShipmentHeaderParam.FindFirst() then
+            recRef.GetTable(SalesShipmentHeaderParam);
+        TempBlob.CreateOutStream(OutStr);
+        if Report.SaveAs(Report::"Sales - Shipment - Ecomon", '', ReportFormat::Pdf, OutStr, recRef) then begin
+            TempBlob.CreateInStream(InStr);
+            exit(BASE64.ToBase64(InStr, true));
+        end;
     end;
 
 }

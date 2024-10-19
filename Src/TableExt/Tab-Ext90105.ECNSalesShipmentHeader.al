@@ -27,9 +27,22 @@ tableextension 90105 ECNSalesShipmentHeader extends "Sales Shipment Header"
         }
         field(90115; ECNEmailError; text[2000])
         {
-            Caption = 'Email sent', Comment = 'ESP="Email enviado"';
+            Caption = 'Error enviar email', Comment = 'ESP="Error enviar email"';
             Editable = false;
             DataClassification = CustomerContent;
+        }
+        field(90120; "ECOSendByemail"; Boolean)
+        {
+            Caption = 'Send by email', Comment = 'ESP="Enviar por email"';
+            FieldClass = FlowField;
+            CalcFormula = lookup(Customer.ECOSendByemail where("No." = field("Bill-to Customer No.")));
+
+        }
+        field(90125; "ECOObservations"; Text[100])
+        {
+            Caption = 'Observaciones', Comment = 'ESP="Observaciones"';
+            DataClassification = CustomerContent;
+
         }
     }
     var

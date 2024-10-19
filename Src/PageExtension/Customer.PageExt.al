@@ -12,6 +12,16 @@ pageextension 90104 Customer extends "Customer Card"
             {
                 ApplicationArea = All;
             }
+            field("ECOSendByemail"; Rec."ECOSendByemail")
+            {
+                ApplicationArea = All;
+            }
+            field("ECORouteCode"; Rec."ECORouteCode")
+            {
+                ApplicationArea = All;
+            }
+
+
         }
     }
 }

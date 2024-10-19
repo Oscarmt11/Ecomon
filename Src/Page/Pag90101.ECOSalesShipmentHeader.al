@@ -31,6 +31,15 @@ page 90101 ECOSalesShipmentHeader
                 {
                     ApplicationArea = all;
                 }
+                field("ECOSendByemail"; Rec."ECOSendByemail")
+                {
+                    ApplicationArea = all;
+                }
+                field("Sell-to Address 2"; Rec."Sell-to Address 2")
+                {
+                    ApplicationArea = all;
+                }
+
             }
         }
     }
