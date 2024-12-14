@@ -2,7 +2,7 @@
   "id": "60c3b336-ee5d-47e6-8b98-593f17ade169",
   "name": "EcomonV2",
   "publisher": "TIP Data by Andreu Serra Sastre",
-  "version": "1.0.0.4",
+  "version": "25.0.0.0",
   "runtime": "13.0",
   "target": "Cloud",
   "application": "24.0.0.0",
@@ -19,7 +19,13 @@
             "publisher": "Kuara Software",
             "name": "EcomonKuara",
             "version": "25.0.0.0"                   
-        }
+        },
+        {                  
+          "id": "3c5bfa68-d351-435e-8d5f-85efdba010c4",
+          "publisher": "NubIT Consulting",
+          "name": "Horus",
+          "version": "25.0.0.0"                   
+      }
       ],
   "features": [
     "NOIMPLICITWITH",

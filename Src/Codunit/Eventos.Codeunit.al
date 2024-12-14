@@ -18,5 +18,11 @@ codeunit 90100 Eventos
         SalesHeader.Validate(ECOdeliveryCode, Cust.ECOdeliveryCode);
     end;
 
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Shipment Header - Edit", OnBeforeSalesShptHeaderModify, '', false, false)]
+    local procedure "Shipment Header - Edit_OnBeforeSalesShptHeaderModify"(var SalesShptHeader: Record "Sales Shipment Header"; FromSalesShptHeader: Record "Sales Shipment Header")
+    begin
+        SalesShptHeader.Validate(ECOdeliveryCode, FromSalesShptHeader.ECOdeliveryCode);
+    end;
+
 
 }
