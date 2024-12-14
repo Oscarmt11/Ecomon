@@ -5,9 +5,18 @@ codeunit 90100 Eventos
     var
         Customer: Record Customer;
     begin
-        If Customer.Get(rec."Sell-to Customer No.")Then begin
-            Rec."Código Responsable":=Customer."Código Responsable";
-            Rec."Código Segmentación":=Customer."Código Segmentación";
+        If Customer.Get(rec."Sell-to Customer No.") Then begin
+            Rec."Código Responsable" := Customer."Código Responsable";
+            Rec."Código Segmentación" := Customer."Código Segmentación";
         end;
     end;
+
+
+    [EventSubscriber(ObjectType::Table, Database::"Sales Header", OnValidateSellToCustomerNoOnBeforeCheckBlockedCustOnDocs, '', false, false)]
+    local procedure "Sales Header_OnValidateSellToCustomerNoOnBeforeCheckBlockedCustOnDocs"(var SalesHeader: Record "Sales Header"; var Cust: Record Customer; var IsHandled: Boolean)
+    begin
+        SalesHeader.Validate(ECOdeliveryCode, Cust.ECOdeliveryCode);
+    end;
+
+
 }

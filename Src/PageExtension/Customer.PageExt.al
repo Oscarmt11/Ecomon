@@ -20,6 +20,11 @@ pageextension 90104 Customer extends "Customer Card"
             {
                 ApplicationArea = All;
             }
+            field("ECOdeliveryCode"; Rec."ECOdeliveryCode")
+            {
+                ApplicationArea = All;
+            }
+
 
 
         }

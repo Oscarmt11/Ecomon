@@ -44,9 +44,15 @@ tableextension 90105 ECNSalesShipmentHeader extends "Sales Shipment Header"
             DataClassification = CustomerContent;
 
         }
+        field(90135; "ECOdeliveryCode"; Code[20])
+        {
+            Caption = 'Delivery code', Comment = 'ESP="Código  repartidoror"';
+            TableRelation = ECOdeliverys.ECODeliveryCode;
+            DataClassification = CustomerContent;
+        }
     }
-    var
-        TentMedia: Record "Tenant Media";
+    // var
+    //     TentMedia: Record "Tenant Media";
 
     procedure SetWorkDescription(NewWorkDescription: Text)
     var

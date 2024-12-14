@@ -3,6 +3,21 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="EcomonV2">
     <body>
       <group id="body">
+        <trans-unit id="Table 3109311650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Deliverys</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Repartidores"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ECOdeliverys - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3109311650 - Field 3047287236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delivery Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código repartidor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ECOdeliverys - Field ECODeliveryCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3109311650 - Field 3541215373 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delivery Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción repartidor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ECOdeliverys - Field ECODeliveryDescription - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 155319469 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Routes</source>
           <note from="Developer" annotates="general" priority="2">ESP="Rutas repartidores"</note>
@@ -32,6 +47,11 @@
           <source>Descripción</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Segmentos - Field Descripción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3109311650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Deliverys</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Repartidores"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ECOdeliverys - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 155319469 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Routes</source>
@@ -83,6 +103,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Cust - Field Código Segmentación - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 296439515 - Field 249624804 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
+          <source>Delivery code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código  repartidoror"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Cust - Field ECOdeliveryCode - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 296439515 - Field 3627794495 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
           <source>Routes</source>
           <note from="Developer" annotates="general" priority="2">ESP="Rutas repartidores"</note>
@@ -118,6 +143,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="Firmado"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECNSalesShipmentHeader - Field ECNSinged - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 3300717121 - Field 249624804 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
+          <source>Delivery code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código  repartidoror"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECNSalesShipmentHeader - Field ECOdeliveryCode - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 3300717121 - Field 3297235660 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
           <source>Observaciones</source>
           <note from="Developer" annotates="general" priority="2">ESP="Observaciones"</note>
@@ -128,6 +158,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Enviar por email"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECNSalesShipmentHeader - Field ECOSendByemail - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 717957521 - Field 814527111 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Body</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cuerpo del mensaje"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECOSales &amp; Receivables Setup  - Field EcoBodyEmail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 717957521 - Field 226045222 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Subjet Email</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cuerpo email"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECOSales &amp; Receivables Setup  - Field ECOSubjetEmail - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 2808295626 - Field 1213313811 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
           <source>Código Responsable</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -137,6 +177,11 @@
           <source>Código Segmentación</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECOSalesHeader - Field Código Segmentación - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2808295626 - Field 249624804 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Delivery code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código  repartidoror"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECOSalesHeader - Field ECOdeliveryCode - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2586979890 - Field 1213313811 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
           <source>Código Responsable</source>
@@ -157,6 +202,11 @@
           <source>Código Segmentación</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesInvHeader - Field Código Segmentación - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4266627282 - Field 249624804 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Delivery code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código  repartidoror"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesInvHeader - Field ECOdeliveryCode - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1492289237 - Field 870350816 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3399585325">
           <source>Responsable</source>

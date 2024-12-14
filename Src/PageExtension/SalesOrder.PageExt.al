@@ -12,6 +12,10 @@ pageextension 90100 ECOSalesOrder extends "Sales Order"
             {
                 ApplicationArea = All;
             }
+            field("ECOdeliveryCode"; Rec.ECOdeliveryCode)
+            {
+                ApplicationArea = All;
+            }
         }
     }
 }

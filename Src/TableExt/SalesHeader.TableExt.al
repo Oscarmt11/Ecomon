@@ -14,5 +14,11 @@ tableextension 90101 ECOSalesHeader extends "Sales Header"
             DataClassification = ToBeClassified;
             TableRelation = Segmentos;
         }
+        field(90135; "ECOdeliveryCode"; Code[20])
+        {
+            Caption = 'Delivery code', Comment = 'ESP="Código  repartidoror"';
+            TableRelation = ECOdeliverys.ECODeliveryCode;
+            DataClassification = CustomerContent;
+        }
     }
 }

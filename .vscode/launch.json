@@ -15,6 +15,21 @@
         "enableLongRunningSqlStatements": true,
         "enableSqlInformationDebugger": true,
         "schemaUpdateMode": "Synchronize"
+    },
+    {
+        "name": "sandbox_tip",
+        "request": "launch",
+        "type": "al",
+        "environmentType": "Sandbox",
+        "environmentName": "Sandboxup_24",
+        "startupObjectId": 29,
+        "startupObjectType": "Page",
+        "breakOnError": "All",
+        "launchBrowser": true,
+        "tenant": "20a9fb12-af9b-49a6-9c3b-8793ab8552b1",
+        "enableLongRunningSqlStatements": true,
+        "enableSqlInformationDebugger": true,
+        "schemaUpdateMode": "Synchronize"
     }
 ]
 }

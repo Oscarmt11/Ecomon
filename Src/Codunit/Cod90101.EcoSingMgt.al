@@ -28,7 +28,9 @@ codeunit 90101 EcoSingMgt
         SalesShipmentHeader.ECNSing.ImportStream(InStr, '*.png');
         SalesShipmentHeader.Validate(ECNSinged, true);
         SalesShipmentHeader.Validate(ECOObservations, Observations);
+        SalesShipmentHeader.MODIFY(true);
         SalesShipmentHeader.CalcFields(ECOSendByemail);
+        Commit();
         if SalesShipmentHeader.ECOSendByemail then begin
             if SendSalesShipmentHeader(SalesShipmentHeader) then begin
                 SalesShipmentHeader.SetRange("No.", ShippingNo);
@@ -62,7 +64,8 @@ codeunit 90101 EcoSingMgt
     begin
         if not SalesSetup.Get() then
             exit;
-        SalesSetup.Get;
+        SalesSetup.TestField(ECOSubjetEmail);
+        SalesSetup.TestField(EcoBodyEmail);
         //SalesShimpemntHeaderReport.Get(DocumentNo);
         SalesShipmentHeaderParam.SetRange("No.", SalesShipmentHeaderParam."No.");
         recRef.GetTable(SalesShipmentHeaderParam);
@@ -70,7 +73,7 @@ codeunit 90101 EcoSingMgt
         if Report.SaveAs(Report::"Sales - Shipment - Ecomon", '', ReportFormat::Pdf, OutStr, recRef) then begin
             TempBlob.CreateInStream(InStr);
             Base64Result := BASE64.ToBase64(InStr, true);
-            EmailMessage.Create('oscarmingte@gmail.com', 'prueba asunto', 'texto', true);
+            EmailMessage.Create('oscarmingte@gmail.com;it@ecomon.net', SalesSetup.ECOSubjetEmail, SalesSetup.EcoBodyEmail, true);
             EmailMessage.AddAttachment(SalesShipmentHeaderParam."No." + '.pdf', 'application/pdf', Base64Result);
             if Email.Send(EmailMessage, Enum::"Email Scenario"::"Sales Order") then
                 exit(true);
