@@ -123,4 +123,7 @@ codeunit 90101 EcoSingMgt
             Error(GetLastErrorText());
     end;
 
+    var
+        Text001: Label 'The product journal line has been posted successfully.', Comment = 'ESP="La línea del diario de productos se ha registrado correctamente."';
+
 }
