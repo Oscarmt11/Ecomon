@@ -101,4 +101,26 @@ codeunit 90101 EcoSingMgt
         end;
     end;
 
+    procedure CreateAndPostItemJournalLine(Locationcode: Code[10]; ItemNo: Code[20]; Quantity: Decimal)
+    var
+        ItemJournalLine: Record "Item Journal Line";
+        ItemJournalPost: Codeunit "Item Jnl.-Post";
+    begin
+        ItemJournalLine.Init();
+        //ItemJournalLine."Journal Template Name" := JournalTemplateName;
+        //ItemJournalLine."Journal Batch Name" := JournalBatchName;
+        //AñadirAlmacen
+        ItemJournalLine."Location Code" := Locationcode;
+        ItemJournalLine."Posting Date" := Today;
+        ItemJournalLine."Entry Type" := ItemJournalLine."Entry Type"::"Negative Adjmt.";
+        ItemJournalLine."Item No." := ItemNo;
+        ItemJournalLine.Quantity := Quantity;
+        ItemJournalLine.Insert(true);
+
+        if ItemJournalPost.Run(ItemJournalLine) then
+            Message(Text001)
+        else
+            Error(GetLastErrorText());
+    end;
+
 }
