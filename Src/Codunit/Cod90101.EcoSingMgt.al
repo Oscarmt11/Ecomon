@@ -109,7 +109,8 @@ codeunit 90101 EcoSingMgt
         ItemJournalLine.Init();
         //ItemJournalLine."Journal Template Name" := JournalTemplateName;
         //ItemJournalLine."Journal Batch Name" := JournalBatchName;
-        //AñadirAlmacen
+        //AñadirAlmacen (revisar si solamente tiene un almacén)
+        //camponuevo sección, 
         ItemJournalLine."Location Code" := Locationcode;
         ItemJournalLine."Posting Date" := Today;
         ItemJournalLine."Entry Type" := ItemJournalLine."Entry Type"::"Negative Adjmt.";
