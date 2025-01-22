@@ -111,7 +111,7 @@ codeunit 90101 EcoSingMgt
         //ItemJournalLine."Journal Batch Name" := JournalBatchName;
         //AñadirAlmacen (revisar si solamente tiene un almacén)
         //camponuevo sección, 
-        ItemJournalLine."Location Code" := Locationcode;
+        ItemJournalLine."Location Code" := 'ALMACEN';
         ItemJournalLine."Posting Date" := Today;
         ItemJournalLine."Entry Type" := ItemJournalLine."Entry Type"::"Negative Adjmt.";
         ItemJournalLine."Item No." := ItemNo;
