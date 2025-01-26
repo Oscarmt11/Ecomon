@@ -48,6 +48,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Segmentos - Field Descripción - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Codeunit 4127894936 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The product journal line has been posted successfully.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="La línea del diario de productos se ha registrado correctamente."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EcoSingMgt - NamedType Text001</note>
+        </trans-unit>
         <trans-unit id="Page 3109311650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Deliverys</source>
           <note from="Developer" annotates="general" priority="2">ESP="Repartidores"</note>
@@ -92,6 +97,16 @@
           <source>aa</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ECOPostedSalesShipment - Action ActionName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4174280417 - Action 243561130 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Create and Post Item Journal Line</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Crear e Insertar líneas en Diario de Productos"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ECOSales &amp; Receivables Setup - Action CreateItemJournalLine - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4174280417 - Action 1593538151 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Create and Post Item Journal Line</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Crear e Insertar líneas en Diario de Productos"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ECOSales &amp; Receivables Setup - Action CreateAndPostItemJournalLine - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 296439515 - Field 1213313811 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
           <source>Código Responsable</source>
@@ -167,6 +182,16 @@
           <source>Subjet Email</source>
           <note from="Developer" annotates="general" priority="2">ESP="Cuerpo email"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECOSales &amp; Receivables Setup  - Field ECOSubjetEmail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 717957521 - Field 2704330142 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Journal Batch Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre de la plantilla de diario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECOSales &amp; Receivables Setup  - Field Journal Batch Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 717957521 - Field 3684440170 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Journal Template Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre del lote de diario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECOSales &amp; Receivables Setup  - Field Journal Template Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2808295626 - Field 1213313811 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
           <source>Código Responsable</source>

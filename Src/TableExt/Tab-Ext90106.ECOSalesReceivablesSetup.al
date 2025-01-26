@@ -12,14 +12,18 @@ tableextension 90106 "ECOSales & Receivables Setup " extends "Sales & Receivable
             Caption = 'Body', Comment = 'ESP="Cuerpo del mensaje"';
             DataClassification = ToBeClassified;
         }
+
         field(90105; "Journal Template Name"; CODE[20])
         {
             Caption = 'Body', Comment = 'ESP="Cuerpo del mensaje"';
             DataClassification = ToBeClassified;
         }
-        field(90101; EcoBodyEmail; Text[2000])
+
+
+        field(90115; "Journal Batch Name"; Code[20])
         {
-            Caption = 'Body', Comment = 'ESP="Cuerpo del mensaje"';
+            Caption = 'Journal Batch Name', Comment = 'ESP="Nombre de la plantilla de diario"';
+
             DataClassification = ToBeClassified;
         }
     }
