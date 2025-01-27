@@ -117,6 +117,7 @@ codeunit 90101 EcoSingMgt
         ItemJournalLine.Quantity := Quantity;
         ItemJournalLine.Insert(true);
 
+        Commit();
         if ItemJournalPost.Run(ItemJournalLine) then
             Message(Text001)
         else

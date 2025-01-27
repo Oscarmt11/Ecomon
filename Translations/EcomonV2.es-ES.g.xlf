@@ -226,8 +226,8 @@
         </trans-unit>
         <trans-unit id="TableExtension 717957521 - Field 3684440170 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
           <source>Journal Template Name</source>
-          <target state="translated">Nombre del lote de diario</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nombre del lote de diario"</note>
+          <target state="translated">Nombre del libro diario</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre del libro diario"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECOSales &amp; Receivables Setup  - Field Journal Template Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2808295626 - Field 1213313811 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
