@@ -93,6 +93,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Segmentos - Control Descripción - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="PageExtension 69159063 - Action 243561130 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3940806096">
+          <source>Create and Post Item Journal Line</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Crear e Insertar líneas en Diario de Productos"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ECOItemJournal - Action CreateItemJournalLine - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 69159063 - Action 1593538151 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3940806096">
+          <source>Create and Post Item Journal Line</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Crear e Insertar líneas en Diario de Productos"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ECOItemJournal - Action CreateAndPostItemJournalLine - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3049533740 - Action 1692444235 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3373253667">
           <source>aa</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -190,7 +200,7 @@
         </trans-unit>
         <trans-unit id="TableExtension 717957521 - Field 3684440170 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
           <source>Journal Template Name</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Nombre del lote de diario"</note>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre del libro diario"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECOSales &amp; Receivables Setup  - Field Journal Template Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2808295626 - Field 1213313811 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">

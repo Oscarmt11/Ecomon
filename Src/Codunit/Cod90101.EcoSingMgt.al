@@ -105,12 +105,11 @@ codeunit 90101 EcoSingMgt
     var
         ItemJournalLine: Record "Item Journal Line";
         ItemJournalPost: Codeunit "Item Jnl.-Post";
+        SalesReceivablesSetup: Record "Sales & Receivables Setup";
     begin
         ItemJournalLine.Init();
-        //ItemJournalLine."Journal Template Name" := JournalTemplateName;
-        //ItemJournalLine."Journal Batch Name" := JournalBatchName;
-        //AñadirAlmacen (revisar si solamente tiene un almacén)
-        //camponuevo sección, 
+        ItemJournalLine."Journal Template Name" := SalesReceivablesSetup."Journal Template Name";
+        ItemJournalLine."Journal Batch Name" := SalesReceivablesSetup."Journal Batch Name";
         ItemJournalLine."Location Code" := 'ALMACEN';
         ItemJournalLine."Posting Date" := Today;
         ItemJournalLine."Entry Type" := ItemJournalLine."Entry Type"::"Negative Adjmt.";

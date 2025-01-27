@@ -14,7 +14,7 @@ tableextension 90106 "ECOSales & Receivables Setup " extends "Sales & Receivable
         }
         field(90105; "Journal Template Name"; Code[20])
         {
-            Caption = 'Journal Template Name', Comment = 'ESP="Nombre del lote de diario"';
+            Caption = 'Journal Template Name', Comment = 'ESP="Nombre del libro diario"';
             DataClassification = ToBeClassified;
         }
         field(90110; "Journal Batch Name"; Code[20])
