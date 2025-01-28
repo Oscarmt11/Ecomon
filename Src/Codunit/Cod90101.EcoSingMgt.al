@@ -115,18 +115,18 @@ codeunit 90101 EcoSingMgt
             Error(Text003);
 
         ItemJournalLine.Init();
-        ItemJournalLine."Journal Template Name" := SalesReceivablesSetup."Journal Template Name";
-        ItemJournalLine."Journal Batch Name" := SalesReceivablesSetup."Journal Batch Name";
-        ItemJournalLine."Location Code" := Locationcode;
-        ItemJournalLine."Document No." := '1';
-        ItemJournalLine."Posting Date" := Today;
-        ItemJournalLine."Entry Type" := ItemJournalLine."Entry Type"::"Negative Adjmt.";
-        ItemJournalLine."Item No." := ItemNo;
-        ItemJournalLine.Quantity := Quantity;
-        ItemJournalLine."Bin Code" := 'BAJO';
-        ItemJournalLine."Quantity (Base)" := Quantity;
-        ItemJournalLine."Invoiced Quantity" := Quantity;
-        ItemJournalLine."Gen. Prod. Posting Group" := Item."Gen. Prod. Posting Group";
+        ItemJournalLine.Validate("Journal Template Name", SalesReceivablesSetup."Journal Template Name");
+        ItemJournalLine.Validate("Journal Batch Name", SalesReceivablesSetup."Journal Batch Name");
+        ItemJournalLine.Validate("Item No.", ItemNo);
+        ItemJournalLine.Validate("Gen. Prod. Posting Group", Item."Gen. Prod. Posting Group");
+        ItemJournalLine.Validate("Document No.", '1');
+        ItemJournalLine.Validate("Posting Date", Today);
+        ItemJournalLine.Validate("Entry Type", ItemJournalLine."Entry Type"::"Negative Adjmt.");
+        ItemJournalLine.Validate("Location Code", Locationcode);
+        ItemJournalLine.Validate(Quantity, Quantity);
+        //ItemJournalLine.Validate("Bin Code", 'BAJO')
+        // ItemJournalLine.Validate("Quantity (Base)", Quantity);
+        // ItemJournalLine.Validate("Invoiced Quantity", Quantity);
         ItemJournalLine.Insert(true);
 
         Commit();

@@ -118,16 +118,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ECOPostedSalesShipment - Action ActionName - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 4174280417 - Action 243561130 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
-          <source>Create and Post Item Journal Line</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Crear e Insertar líneas en Diario de Productos"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ECOSales &amp; Receivables Setup - Action CreateItemJournalLine - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 4174280417 - Action 1593538151 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
-          <source>Create and Post Item Journal Line</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Crear e Insertar líneas en Diario de Productos"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ECOSales &amp; Receivables Setup - Action CreateAndPostItemJournalLine - Property Caption</note>
-        </trans-unit>
         <trans-unit id="TableExtension 296439515 - Field 1213313811 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
           <source>Código Responsable</source>
           <note from="Developer" annotates="general" priority="2"></note>
