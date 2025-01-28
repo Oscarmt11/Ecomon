@@ -53,6 +53,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="La línea del diario de productos se ha registrado correctamente."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EcoSingMgt - NamedType Text001</note>
         </trans-unit>
+        <trans-unit id="Codeunit 4127894936 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The sales and accounts receivable configuration could not be found.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="No se pudo encontrar la configuración de ventas y cuentas a cobrar."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EcoSingMgt - NamedType Text002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4127894936 - NamedType 95063322" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The product with No. %1 does not exist</source>
+          <note from="Developer" annotates="general" priority="2">ESP="El producto con Nº %1 no existe"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EcoSingMgt - NamedType Text003</note>
+        </trans-unit>
         <trans-unit id="Page 3109311650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Deliverys</source>
           <note from="Developer" annotates="general" priority="2">ESP="Repartidores"</note>

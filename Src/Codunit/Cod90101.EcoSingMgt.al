@@ -106,15 +106,27 @@ codeunit 90101 EcoSingMgt
         ItemJournalLine: Record "Item Journal Line";
         ItemJournalPost: Codeunit "Item Jnl.-Post";
         SalesReceivablesSetup: Record "Sales & Receivables Setup";
+        Item: Record Item;
     begin
+
+        if not SalesReceivablesSetup.Get() then
+            Error(Text002);
+        if not Item.Get(ItemNo) then
+            Error(Text003);
+
         ItemJournalLine.Init();
         ItemJournalLine."Journal Template Name" := SalesReceivablesSetup."Journal Template Name";
         ItemJournalLine."Journal Batch Name" := SalesReceivablesSetup."Journal Batch Name";
-        ItemJournalLine."Location Code" := 'ALMACEN';
+        ItemJournalLine."Location Code" := Locationcode;
+        ItemJournalLine."Document No." := '1';
         ItemJournalLine."Posting Date" := Today;
         ItemJournalLine."Entry Type" := ItemJournalLine."Entry Type"::"Negative Adjmt.";
         ItemJournalLine."Item No." := ItemNo;
         ItemJournalLine.Quantity := Quantity;
+        ItemJournalLine."Bin Code" := 'BAJO';
+        ItemJournalLine."Quantity (Base)" := Quantity;
+        ItemJournalLine."Invoiced Quantity" := Quantity;
+        ItemJournalLine."Gen. Prod. Posting Group" := Item."Gen. Prod. Posting Group";
         ItemJournalLine.Insert(true);
 
         Commit();
@@ -126,5 +138,7 @@ codeunit 90101 EcoSingMgt
 
     var
         Text001: Label 'The product journal line has been posted successfully.', Comment = 'ESP="La línea del diario de productos se ha registrado correctamente."';
+        Text002: Label 'The sales and accounts receivable configuration could not be found.', Comment = 'ESP="No se pudo encontrar la configuración de ventas y cuentas a cobrar."';
+        Text003: Label 'The product with No. %1 does not exist', Comment = 'ESP="El producto con Nº %1 no existe"';
 
 }
