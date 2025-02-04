@@ -101,7 +101,7 @@ codeunit 90101 EcoSingMgt
         end;
     end;
 
-    procedure CreateAndPostItemJournalLine(Locationcode: Code[10]; ItemNo: Code[20]; Quantity: Decimal)
+    procedure CreateAndPostItemJournalLine(ItemNo: Code[20]; Quantity: Decimal)
     var
         ItemJournalLine: Record "Item Journal Line";
         ItemJournalPost: Codeunit "Item Jnl.-Post";
@@ -119,10 +119,10 @@ codeunit 90101 EcoSingMgt
         ItemJournalLine.Validate("Journal Batch Name", SalesReceivablesSetup."Journal Batch Name");
         ItemJournalLine.Validate("Item No.", ItemNo);
         ItemJournalLine.Validate("Gen. Prod. Posting Group", Item."Gen. Prod. Posting Group");
-        ItemJournalLine.Validate("Document No.", '1');
+        ItemJournalLine.Validate("Document No.", 'AjusteAPP');
         ItemJournalLine.Validate("Posting Date", Today);
         ItemJournalLine.Validate("Entry Type", ItemJournalLine."Entry Type"::"Negative Adjmt.");
-        ItemJournalLine.Validate("Location Code", Locationcode);
+        ItemJournalLine.Validate("Location Code", 'ALMACEN');
         ItemJournalLine.Validate(Quantity, Quantity);
         //ItemJournalLine.Validate("Bin Code", 'BAJO')
         // ItemJournalLine.Validate("Quantity (Base)", Quantity);
@@ -130,6 +130,7 @@ codeunit 90101 EcoSingMgt
         ItemJournalLine.Insert(true);
 
         Commit();
+        ItemJournalPost.SetPreviewMode(false);
         if ItemJournalPost.Run(ItemJournalLine) then
             Message(Text001)
         else
