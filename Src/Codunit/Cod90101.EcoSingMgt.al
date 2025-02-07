@@ -104,9 +104,10 @@ codeunit 90101 EcoSingMgt
     procedure CreateAndPostItemJournalLine(ItemNo: Code[20]; Quantity: Decimal)
     var
         ItemJournalLine: Record "Item Journal Line";
-        ItemJournalPost: Codeunit "Item Jnl.-Post";
+        ItemJournalPost: Codeunit "Item Jnl.-Post Batch";
         SalesReceivablesSetup: Record "Sales & Receivables Setup";
         Item: Record Item;
+        ItemJnlTemplate: Record "Item Journal Template";
     begin
 
         if not SalesReceivablesSetup.Get() then
@@ -130,16 +131,17 @@ codeunit 90101 EcoSingMgt
         ItemJournalLine.Insert(true);
 
         Commit();
-        ItemJournalPost.SetPreviewMode(false);
+        //ItemJournalPost.SetPreviewMode(false);
+        //ItemJournalPost.SetSuppressCommit(true);
         if ItemJournalPost.Run(ItemJournalLine) then
             Message(Text001)
         else
             Error(GetLastErrorText());
     end;
 
+
     var
         Text001: Label 'The product journal line has been posted successfully.', Comment = 'ESP="La línea del diario de productos se ha registrado correctamente."';
         Text002: Label 'The sales and accounts receivable configuration could not be found.', Comment = 'ESP="No se pudo encontrar la configuración de ventas y cuentas a cobrar."';
         Text003: Label 'The product with No. %1 does not exist', Comment = 'ESP="El producto con Nº %1 no existe"';
-
 }
