@@ -53,14 +53,13 @@ tableextension 90105 ECNSalesShipmentHeader extends "Sales Shipment Header"
     }
     // var
     //     TentMedia: Record "Tenant Media";
-
-    procedure SetWorkDescription(NewWorkDescription: Text)
-    var
-        OutStream: OutStream;
-    begin
-        Clear("Work Description");
-        "Work Description".CreateOutStream(OutStream, TEXTENCODING::UTF8);
-        OutStream.WriteText(NewWorkDescription);
-        Modify();
-    end;
+    //     procedure SetECODeliverCode(NewECODeliveryCode: Text)
+    // var
+    //     OutStream: OutStream;
+    // begin
+    //     Clear(ECOdeliveryCode);
+    //     ECOdeliveryCode.CreateOutStream(OutStream, TEXTENCODING::UTF8);
+    //     OutStream.WriteText(NewWorkDescription);
+    //     Modify;
+    // end;
 }

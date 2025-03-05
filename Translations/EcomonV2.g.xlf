@@ -68,6 +68,31 @@
           <note from="Developer" annotates="general" priority="2">ESP="Repartidores"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page ECOdeliverys - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 356478432 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ECOPostedSalesShipmentEdit</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ECOPostedSalesShipmentEdit - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 356478432 - Control 40327205 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Facturación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ECOPostedSalesShipmentEdit - Control Bill - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 356478432 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <note from="Developer" annotates="general" priority="2">ESP="General"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ECOPostedSalesShipmentEdit - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 356478432 - Control 3920998362 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sell</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Venta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ECOPostedSalesShipmentEdit - Control Sell - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 356478432 - Control 4180147670 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ship</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Envío"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ECOPostedSalesShipmentEdit - Control Ship - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 155319469 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Routes</source>
           <note from="Developer" annotates="general" priority="2">ESP="Rutas repartidores"</note>
@@ -117,6 +142,11 @@
           <source>aa</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ECOPostedSalesShipment - Action ActionName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3049533740 - Action 296506339 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3373253667">
+          <source>Update Document</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Actualizar Documento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ECOPostedSalesShipment - Action UpdateDoc - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 296439515 - Field 1213313811 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
           <source>Código Responsable</source>

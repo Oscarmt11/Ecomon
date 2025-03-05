@@ -134,9 +134,10 @@ codeunit 90101 EcoSingMgt
         //ItemJournalPost.SetPreviewMode(false);
         //ItemJournalPost.SetSuppressCommit(true);
         if ItemJournalPost.Run(ItemJournalLine) then
-            Message(Text001)
-        else
-            Error(GetLastErrorText());
+            if not GuiAllowed then
+                Message(Text001)
+            else
+                Error(GetLastErrorText());
     end;
 
 

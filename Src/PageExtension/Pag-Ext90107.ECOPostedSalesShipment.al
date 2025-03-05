@@ -24,14 +24,13 @@ pageextension 90107 ECOPostedSalesShipment extends "Posted Sales Shipment"
             {
                 ApplicationArea = ALL;
             }
+        }
+        addafter("Ship-to Post Code")
+        {
             field(ECOdeliveryCode; REC.ECOdeliveryCode)
             {
                 ApplicationArea = ALL;
             }
-
-
-
-
         }
 
     }
@@ -53,6 +52,27 @@ pageextension 90107 ECOPostedSalesShipment extends "Posted Sales Shipment"
 
                 end;
             }
+        }
+        addbefore("Update Document")
+        {
+            action(UpdateDoc)
+            {
+                Caption = 'Update Document', Comment = 'ESP="Actualizar Documento"';
+                ApplicationArea = All;
+                Image = EditLines;
+                trigger OnAction()
+                var
+                    PostedSalesShipmentEdit: Page "ECOPostedSalesShipmentEdit";
+                begin
+                    PostedSalesShipmentEdit.SetRecord(Rec);
+                    PostedSalesShipmentEdit.RunModal();
+                    CurrPage.Update();
+                end;
+            }
+        }
+        modify("Update Document")
+        {
+            Visible = false;
         }
     }
 }

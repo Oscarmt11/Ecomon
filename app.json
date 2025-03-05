@@ -5,8 +5,8 @@
   "version": "25.0.0.1",
   "runtime": "13.0",
   "target": "Cloud",
-  "application": "24.0.0.0",
-  "platform": "24.0.0.0",
+  "application": "25.0.0.0",
+  "platform": "25.0.0.0",
   "resourceExposurePolicy": {
     "allowDebugging": true,
     "allowDownloadingSource": true,
@@ -19,13 +19,7 @@
             "publisher": "Kuara Software",
             "name": "EcomonKuara",
             "version": "25.0.0.0"                   
-        },
-        {                  
-          "id": "3c5bfa68-d351-435e-8d5f-85efdba010c4",
-          "publisher": "NubIT Consulting",
-          "name": "Horus",
-          "version": "25.0.0.0"                   
-      }
+        }
       ],
   "features": [
     "NOIMPLICITWITH",
