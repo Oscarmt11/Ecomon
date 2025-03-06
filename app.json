@@ -5,8 +5,8 @@
   "version": "25.0.0.3",
   "runtime": "13.0",
   "target": "Cloud",
-  "application": "25.0.0.0",
-  "platform": "25.0.0.0",
+  "application": "24.0.0.0",
+  "platform": "23.0.0.0",
   "resourceExposurePolicy": {
     "allowDebugging": true,
     "allowDownloadingSource": true,

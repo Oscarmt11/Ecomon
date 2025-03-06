@@ -13,6 +13,5 @@ permissionset 90100 PermissionECOMON
         codeunit Eventos = X,
         page ECOdeliverys = X,
         page EcoRoutes = X,
-        page ECOSalesShipmentHeader = X,
         page Segmentos = X;
 }
