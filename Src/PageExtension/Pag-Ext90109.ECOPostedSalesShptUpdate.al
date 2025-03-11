@@ -1,17 +1,17 @@
-namespace Ecomon.Ecomon;
+// namespace Ecomon.Ecomon;
 
-using Microsoft.Sales.History;
+// using Microsoft.Sales.History;
 
-pageextension 90109 ECOPostedSalesShptUpdate extends "Posted Sales Shipment - Update"
-{
-    layout
-    {
-        addafter("Shipping Agent Service Code")
-        {
-            field(ECOdeliveryCode; REC.ECOdeliveryCode)
-            {
-                ApplicationArea = ALL;
-            }
-        }
-    }
-}
+// pageextension 90115 ECOPostedSalesShptUpdate extends "Posted Sales Shipment"
+// {
+//     layout
+//     {
+//         addafter("Shipping Agent Service Code")
+//         {
+//             field(ECOdeliveryCode; REC.ECOdeliveryCode)
+//             {
+//                 ApplicationArea = ALL;
+//             }
+//         }
+//     }
+// }

@@ -18,6 +18,13 @@ codeunit 90100 Eventos
         SalesHeader.Validate(ECOdeliveryCode, Cust.ECOdeliveryCode);
     end;
 
+    [EventSubscriber(ObjectType::Page, Page::"Posted Sales Shipment - Update", OnAfterRecordChanged, '', false, false)]
+    local procedure "Posted Sales Shipment - Update_OnAfterRecordChanged"(var SalesShipmentHeader: Record "Sales Shipment Header"; xSalesShipmentHeader: Record "Sales Shipment Header"; var IsChanged: Boolean)
+    begin
+        IsChanged := (SalesShipmentHeader.ECOdeliveryCode <> xSalesShipmentHeader.ECOdeliveryCode);
+    end;
+
+
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Shipment Header - Edit", OnBeforeSalesShptHeaderModify, '', false, false)]
     local procedure "Shipment Header - Edit_OnBeforeSalesShptHeaderModify"(var SalesShptHeader: Record "Sales Shipment Header"; FromSalesShptHeader: Record "Sales Shipment Header")
     begin
