@@ -1,7 +1,3 @@
-namespace Ecomon.Ecomon;
-
-using Microsoft.Sales.History;
-
 pageextension 90109 ECOPostedSalesShptUpdate extends "Posted Sales Shipment - Update"
 {
     layout

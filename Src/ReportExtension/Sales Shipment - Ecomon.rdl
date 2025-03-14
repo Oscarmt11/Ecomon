@@ -9,7 +9,7 @@
       <am:Name>MSRB</am:Name>
       <am:Version>15.0.20283.0</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2024-10-07T11:49:44.6206039Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2025-03-13T13:37:47.5706678Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -1750,7 +1750,7 @@ Cstr(Fields!Comment_Customer.Value) + Chr(177) +
 Cstr(Fields!No_SalesShptHeader.Value) + Chr(177) +
 Cstr(Fields!DocDate_SalesShptHeader.Value) + Chr(177) +
 Cstr(Fields!SelltoCustNo_SalesShptHeader.Value) + Chr(177) +
-Cstr(Fields!SalesPurchPersonName.Value) , 1)</Hidden>
+Cstr(Fields!SalesPurchPersonName.Value) + Chr(177) + Cstr(Fields!ECOObservations.Value) , 1)</Hidden>
                                             </Visibility>
                                             <Style>
                                               <Border>
@@ -1758,6 +1758,7 @@ Cstr(Fields!SalesPurchPersonName.Value) , 1)</Hidden>
                                               </Border>
                                             </Style>
                                           </Textbox>
+                                          <rd:Selected>true</rd:Selected>
                                         </CellContents>
                                       </TablixCell>
                                     </TablixCells>
@@ -2310,7 +2311,7 @@ Cstr(Fields!SalesPurchPersonName.Value) , 1)</Hidden>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=code.GetData(14,1)</Value>
+                      <Value>=code.GetData(19,1)</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Arial Narrow</FontFamily>
@@ -3541,6 +3542,9 @@ End Function
         </Field>
         <Field Name="SingTip">
           <DataField>SingTip</DataField>
+        </Field>
+        <Field Name="ECOObservations">
+          <DataField>ECOObservations</DataField>
         </Field>
       </Fields>
       <Query>

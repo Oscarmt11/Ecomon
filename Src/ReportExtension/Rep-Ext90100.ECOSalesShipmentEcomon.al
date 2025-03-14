@@ -6,6 +6,7 @@ reportextension 90100 "ECOSales - Shipment - Ecomon" extends "Sales - Shipment -
         add("Sales Shipment Header")
         {
             column(SingTip; TenatMedia.Content) { }
+            column(ECOObservations; SalesShptHeader.ECOObservations) { }
         }
         modify("Sales Shipment Header")
         {
@@ -17,6 +18,7 @@ reportextension 90100 "ECOSales - Shipment - Ecomon" extends "Sales - Shipment -
     }
     VAR
         TenatMedia: Record "Tenant Media";
+        SalesShptHeader: Record "Sales Shipment Header";
 
     local procedure GetSignImage(): text
     begin
