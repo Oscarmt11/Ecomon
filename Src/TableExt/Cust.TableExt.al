@@ -27,7 +27,7 @@ tableextension 90100 Cust extends Customer
         }
         field(90115; "ECOdeliveryCode"; Code[20])
         {
-            Caption = 'Delivery code', Comment = 'ESP="Código  repartidoror"';
+            Caption = 'Delivery code', Comment = 'ESP="Código  repartidor"';
             TableRelation = ECOdeliverys.ECODeliveryCode;
             DataClassification = CustomerContent;
         }

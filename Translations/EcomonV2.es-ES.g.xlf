@@ -72,18 +72,6 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EcoSingMgt - NamedType Text003</note>
           <target>El producto con Nº %1 no existe</target>
         </trans-unit>
-        <trans-unit id="Codeunit 4127894936 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The sales and accounts receivable configuration could not be found.</source>
-          <target state="translated">No se pudo encontrar la configuración de ventas y cuentas a cobrar.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="No se pudo encontrar la configuración de ventas y cuentas a cobrar."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EcoSingMgt - NamedType Text002</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 4127894936 - NamedType 95063322" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The product with No. %1 does not exist</source>
-          <target state="translated">El producto con Nº %1 no existe</target>
-          <note from="Developer" annotates="general" priority="2">ESP="El producto con Nº %1 no existe"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EcoSingMgt - NamedType Text003</note>
-        </trans-unit>
         <trans-unit id="Page 3109311650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Deliverys</source>
           <note from="Developer" annotates="general" priority="2">ESP="Repartidores"</note>
@@ -97,27 +85,27 @@
         </trans-unit>
         <trans-unit id="Page 356478432 - Control 40327205 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bill</source>
-          <target state="translated">Facturación</target>
           <note from="Developer" annotates="general" priority="2">ESP="Facturación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page ECOPostedSalesShipmentEdit - Control Bill - Property Caption</note>
+          <target>Facturación</target>
         </trans-unit>
         <trans-unit id="Page 356478432 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>General</source>
-          <target state="translated">General</target>
           <note from="Developer" annotates="general" priority="2">ESP="General"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page ECOPostedSalesShipmentEdit - Control General - Property Caption</note>
+          <target>General</target>
         </trans-unit>
         <trans-unit id="Page 356478432 - Control 3920998362 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sell</source>
-          <target state="translated">Venta</target>
           <note from="Developer" annotates="general" priority="2">ESP="Venta"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page ECOPostedSalesShipmentEdit - Control Sell - Property Caption</note>
+          <target>Venta</target>
         </trans-unit>
         <trans-unit id="Page 356478432 - Control 4180147670 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Ship</source>
-          <target state="translated">Envío</target>
           <note from="Developer" annotates="general" priority="2">ESP="Envío"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page ECOPostedSalesShipmentEdit - Control Ship - Property Caption</note>
+          <target>Envío</target>
         </trans-unit>
         <trans-unit id="Page 155319469 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Routes</source>
@@ -172,17 +160,11 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ECOPostedSalesShipment - Action ActionName - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 4174280417 - Action 243561130 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
-          <source>Create and Post Item Journal Line</source>
-          <target state="translated">Crear e Insertar líneas en Diario de Productos</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Crear e Insertar líneas en Diario de Productos"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ECOSales &amp; Receivables Setup - Action CreateItemJournalLine - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 4174280417 - Action 1593538151 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
-          <source>Create and Post Item Journal Line</source>
-          <target state="translated">Crear e Insertar líneas en Diario de Productos</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Crear e Insertar líneas en Diario de Productos"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ECOSales &amp; Receivables Setup - Action CreateAndPostItemJournalLine - Property Caption</note>
+        <trans-unit id="PageExtension 3049533740 - Action 296506339 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3373253667">
+          <source>Update Document</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Actualizar Documento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ECOPostedSalesShipment - Action UpdateDoc - Property Caption</note>
+          <target>Actualizar Documento</target>
         </trans-unit>
         <trans-unit id="TableExtension 296439515 - Field 1213313811 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
           <source>Código Responsable</source>
@@ -196,9 +178,9 @@
         </trans-unit>
         <trans-unit id="TableExtension 296439515 - Field 249624804 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
           <source>Delivery code</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Código  repartidoror"</note>
+          <note from="Developer" annotates="general" priority="2">ESP="Código  repartidor"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Cust - Field ECOdeliveryCode - Property Caption</note>
-          <target>Código  repartidoror</target>
+          <target>Código  repartidor</target>
         </trans-unit>
         <trans-unit id="TableExtension 296439515 - Field 3627794495 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
           <source>Routes</source>
@@ -243,9 +225,9 @@
         </trans-unit>
         <trans-unit id="TableExtension 3300717121 - Field 249624804 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
           <source>Delivery code</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Código  repartidoror"</note>
+          <note from="Developer" annotates="general" priority="2">ESP="Código  repartidor"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECNSalesShipmentHeader - Field ECOdeliveryCode - Property Caption</note>
-          <target>Código  repartidoror</target>
+          <target>Código  repartidor</target>
         </trans-unit>
         <trans-unit id="TableExtension 3300717121 - Field 3297235660 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
           <source>Observaciones</source>
@@ -295,9 +277,9 @@
         </trans-unit>
         <trans-unit id="TableExtension 2808295626 - Field 249624804 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
           <source>Delivery code</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Código  repartidoror"</note>
+          <note from="Developer" annotates="general" priority="2">ESP="Código  repartidor"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECOSalesHeader - Field ECOdeliveryCode - Property Caption</note>
-          <target>Código  repartidoror</target>
+          <target>Código  repartidor</target>
         </trans-unit>
         <trans-unit id="TableExtension 2586979890 - Field 1213313811 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
           <source>Código Responsable</source>
@@ -321,9 +303,9 @@
         </trans-unit>
         <trans-unit id="TableExtension 4266627282 - Field 249624804 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
           <source>Delivery code</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Código  repartidoror"</note>
+          <note from="Developer" annotates="general" priority="2">ESP="Código  repartidor"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesInvHeader - Field ECOdeliveryCode - Property Caption</note>
-          <target>Código  repartidoror</target>
+          <target>Código  repartidor</target>
         </trans-unit>
         <trans-unit id="TableExtension 1492289237 - Field 870350816 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3399585325">
           <source>Responsable</source>

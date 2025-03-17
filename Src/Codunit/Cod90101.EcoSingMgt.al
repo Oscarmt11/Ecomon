@@ -50,6 +50,7 @@ codeunit 90101 EcoSingMgt
     var
         SalesSetup: Record "Sales & Receivables Setup";
         InfEmpresa: record "Company Information";
+        Customer: Record Customer;
         Email: Codeunit Email;
         EmailMessage: Codeunit "Email Message";
         TempBlob: Codeunit "Temp Blob";
@@ -62,6 +63,9 @@ codeunit 90101 EcoSingMgt
         recRef: RecordRef;
         TenantMedia: Record "Tenant Media";
     begin
+        if not Customer.get(SalesShipmentHeaderParam."Sell-to Customer No.") then
+            exit;
+
         if not SalesSetup.Get() then
             exit;
         SalesSetup.TestField(ECOSubjetEmail);
@@ -73,7 +77,9 @@ codeunit 90101 EcoSingMgt
         if Report.SaveAs(Report::"Sales - Shipment - Ecomon", '', ReportFormat::Pdf, OutStr, recRef) then begin
             TempBlob.CreateInStream(InStr);
             Base64Result := BASE64.ToBase64(InStr, true);
-            EmailMessage.Create('oscarmingte@gmail.com;it@ecomon.net', SalesSetup.ECOSubjetEmail, SalesSetup.EcoBodyEmail, true);
+            SalesSetup.ECOSubjetEmail := StrSubstNo(SalesSetup.ECOSubjetEmail, SalesShipmentHeaderParam."No.");
+            SalesSetup.EcoBodyEmail := StrSubstNo(SalesSetup.EcoBodyEmail, SalesShipmentHeaderParam."No.");
+            EmailMessage.Create(Customer."E-Mail" + ';it@ecomon.net', SalesSetup.ECOSubjetEmail, SalesSetup.EcoBodyEmail, true);
             EmailMessage.AddAttachment(SalesShipmentHeaderParam."No." + '.pdf', 'application/pdf', Base64Result);
             if Email.Send(EmailMessage, Enum::"Email Scenario"::"Sales Order") then
                 exit(true);
