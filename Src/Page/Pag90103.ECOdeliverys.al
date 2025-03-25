@@ -4,8 +4,7 @@ page 90103 ECOdeliverys
     Caption = 'Deliverys', Comment = 'ESP="Repartidores"';
     PageType = List;
     SourceTable = ECOdeliverys;
-    //UsageCategory = Lists;
-    Permissions = TableData 90102 = rimd;
+    UsageCategory = Lists;
     layout
     {
         area(Content)

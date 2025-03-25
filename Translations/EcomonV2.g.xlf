@@ -3,6 +3,21 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="EcomonV2">
     <body>
       <group id="body">
+        <trans-unit id="Page 3787375602 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ecOdeliverysApi</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ECOdeliverysApi - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3787375602 - Control 4240716708 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delivery Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código repartidor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ECOdeliverysApi - Control ecoDeliveryCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3787375602 - Control 3541215373 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delivery Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripcion repartidor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ECOdeliverysApi - Control ECODeliveryDescription - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3109311650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Deliverys</source>
           <note from="Developer" annotates="general" priority="2">ESP="Repartidores"</note>
