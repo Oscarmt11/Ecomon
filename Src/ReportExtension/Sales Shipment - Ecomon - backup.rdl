@@ -3546,12 +3546,6 @@ End Function
         <Field Name="ECOObservations">
           <DataField>ECOObservations</DataField>
         </Field>
-        <Field Name="ECOdeliveryCode">
-          <DataField>ECOdeliveryCode</DataField>
-        </Field>
-        <Field Name="ECORouteCode">
-          <DataField>ECORouteCode</DataField>
-        </Field>
       </Fields>
       <Query>
         <DataSourceName>DataSource</DataSourceName>

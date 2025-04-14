@@ -27,6 +27,10 @@ pageextension 90107 ECOPostedSalesShipment extends "Posted Sales Shipment"
         }
         addafter("Ship-to Post Code")
         {
+            field("ECORouteCode"; Rec."ECORouteCode")
+            {
+                ApplicationArea = All;
+            }
             field(ECOdeliveryCode; REC.ECOdeliveryCode)
             {
                 ApplicationArea = ALL;

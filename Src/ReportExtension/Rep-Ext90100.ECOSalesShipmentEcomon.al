@@ -5,8 +5,18 @@ reportextension 90100 "ECOSales - Shipment - Ecomon" extends "Sales - Shipment -
     {
         add("Sales Shipment Header")
         {
-            column(SingTip; TenatMedia.Content) { }
-            column(ECOObservations; "Sales Shipment Header".ECOObservations) { }
+            column(SingTip; TenatMedia.Content)
+            {
+            }
+            column(ECOObservations; "Sales Shipment Header".ECOObservations)
+            {
+            }
+            column(ECOdeliveryCode; ECOdeliveryCode)
+            {
+            }
+            column(ECORouteCode; ECORouteCode)
+            {
+            }
         }
         modify("Sales Shipment Header")
         {

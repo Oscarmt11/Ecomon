@@ -19,13 +19,13 @@ tableextension 90100 Cust extends Customer
             Caption = 'Send by email', Comment = 'ESP="Enviar por email"';
             DataClassification = CustomerContent;
         }
-        field(90110; "ECORouteCode"; Code[20])
+        field(90130; "ECORouteCode"; Code[20])
         {
             Caption = 'Routes', Comment = 'ESP="Rutas repartidores"';
             TableRelation = EcoRoutes.EcoRouteCode;
             DataClassification = CustomerContent;
         }
-        field(90115; "ECOdeliveryCode"; Code[20])
+        field(90135; "ECOdeliveryCode"; Code[20])
         {
             Caption = 'Delivery code', Comment = 'ESP="Código  repartidor"';
             TableRelation = ECOdeliverys.ECODeliveryCode;

@@ -223,6 +223,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="Observaciones"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECNSalesShipmentHeader - Field ECOObservations - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 3300717121 - Field 3627794495 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
+          <source>Routes</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Rutas repartidores"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECNSalesShipmentHeader - Field ECORouteCode - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 3300717121 - Field 4233884678 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
           <source>Send by email</source>
           <note from="Developer" annotates="general" priority="2">ESP="Enviar por email"</note>
@@ -263,6 +268,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="Código  repartidor"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECOSalesHeader - Field ECOdeliveryCode - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 2808295626 - Field 3627794495 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Routes</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Rutas repartidores"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECOSalesHeader - Field ECORouteCode - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 2586979890 - Field 1213313811 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
           <source>Código Responsable</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -287,6 +297,11 @@
           <source>Delivery code</source>
           <note from="Developer" annotates="general" priority="2">ESP="Código  repartidor"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesInvHeader - Field ECOdeliveryCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4266627282 - Field 3627794495 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Routes</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Rutas repartidores"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesInvHeader - Field ECORouteCode - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1492289237 - Field 870350816 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3399585325">
           <source>Responsable</source>

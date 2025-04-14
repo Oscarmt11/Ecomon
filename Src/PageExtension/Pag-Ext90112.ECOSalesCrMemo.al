@@ -1,17 +1,13 @@
-pageextension 90100 ECOSalesOrder extends "Sales Order"
+namespace Ecomon.Ecomon;
+
+using Microsoft.Sales.Document;
+
+pageextension 90112 "ECOSales Cr Memo" extends "Sales Credit Memo"
 {
     layout
     {
         addafter("Salesperson Code")
         {
-            field("Código Responsable"; Rec."Código Responsable")
-            {
-                ApplicationArea = All;
-            }
-            field("Código Segmentación"; Rec."Código Segmentación")
-            {
-                ApplicationArea = All;
-            }
             field("ECORouteCode"; Rec."ECORouteCode")
             {
                 ApplicationArea = All;

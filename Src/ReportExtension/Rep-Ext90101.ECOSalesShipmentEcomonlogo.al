@@ -7,8 +7,15 @@ reportextension 90101 "ECOSalesShipmentEcomon l" extends "Sales - Shipment - Eco
     {
         add("Sales Shipment Header")
         {
-            column(ECOObservations; "Sales Shipment Header".ECOObservations) { }
+            column(ECOObservations; "Sales Shipment Header".ECOObservations)
+            {
+            }
+            column(ECOdeliveryCode; ECOdeliveryCode)
+            {
+            }
+            column(ECORouteCode; ECORouteCode)
+            {
+            }
         }
     }
-
 }

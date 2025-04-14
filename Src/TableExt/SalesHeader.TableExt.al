@@ -14,9 +14,11 @@ tableextension 90101 ECOSalesHeader extends "Sales Header"
             DataClassification = ToBeClassified;
             TableRelation = Segmentos;
         }
-        field(90110; "ECORouteCode"; Code[20])
+        field(90130; "ECORouteCode"; Code[20])
         {
             Caption = 'Routes', Comment = 'ESP="Rutas repartidores"';
+            TableRelation = EcoRoutes.EcoRouteCode;
+            DataClassification = CustomerContent;
         }
         field(90135; "ECOdeliveryCode"; Code[20])
         {

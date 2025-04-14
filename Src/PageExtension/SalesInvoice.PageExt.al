@@ -12,6 +12,14 @@ pageextension 90101 ECOSalesInvoice extends "Sales Invoice"
             {
                 ApplicationArea = All;
             }
+            field("ECORouteCode"; Rec."ECORouteCode")
+            {
+                ApplicationArea = All;
+            }
+            field("ECOdeliveryCode"; Rec."ECOdeliveryCode")
+            {
+                ApplicationArea = All;
+            }
         }
     }
 }
