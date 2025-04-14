@@ -10,4 +10,5 @@ reportextension 90101 "ECOSalesShipmentEcomon l" extends "Sales - Shipment - Eco
             column(ECOObservations; "Sales Shipment Header".ECOObservations) { }
         }
     }
+
 }
