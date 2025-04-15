@@ -56,6 +56,12 @@ tableextension 90105 ECNSalesShipmentHeader extends "Sales Shipment Header"
             TableRelation = ECOdeliverys.ECODeliveryCode;
             DataClassification = CustomerContent;
         }
+        field(80140; "AutoInvoicing"; Boolean)
+        {
+            Caption = 'AutoInvoicing', Comment = 'ESP="Facturación Automática"';
+            FieldClass = FlowField;
+            CalcFormula = lookup(Customer."Combine Shipments" where("No." = FIELD("Sell-to Customer No.")));
+        }
     }
     // var
     //     TentMedia: Record "Tenant Media";

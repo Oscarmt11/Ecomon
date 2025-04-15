@@ -188,6 +188,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="Enviar por email"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Cust - Field ECOSendByemail - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 3300717121 - Field 2775050013 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
+          <source>AutoInvoicing</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Facturación Automática"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECNSalesShipmentHeader - Field AutoInvoicing - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 3300717121 - Field 1060187728 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
           <source>Error enviar email</source>
           <note from="Developer" annotates="general" priority="2">ESP="Error enviar email"</note>
