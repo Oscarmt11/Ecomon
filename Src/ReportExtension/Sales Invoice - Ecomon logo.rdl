@@ -97,6 +97,12 @@ End Function
         <Field Name="DisplayAdditionalFeeNote">
           <DataField>DisplayAdditionalFeeNote</DataField>
         </Field>
+        <Field Name="DeliveryCaption">
+          <DataField>DeliveryCaption</DataField>
+        </Field>
+        <Field Name="RouteCaption">
+          <DataField>RouteCaption</DataField>
+        </Field>
         <Field Name="CompanyInfo2Picture">
           <DataField>CompanyInfo2Picture</DataField>
         </Field>

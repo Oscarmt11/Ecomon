@@ -97,6 +97,12 @@ End Function
         <Field Name="DisplayAdditionalFeeNote">
           <DataField>DisplayAdditionalFeeNote</DataField>
         </Field>
+        <Field Name="DeliveryCaption">
+          <DataField>DeliveryCaption</DataField>
+        </Field>
+        <Field Name="RouteCaption">
+          <DataField>RouteCaption</DataField>
+        </Field>
         <Field Name="CompanyInfo2Picture">
           <DataField>CompanyInfo2Picture</DataField>
         </Field>
@@ -283,6 +289,12 @@ End Function
         <Field Name="GetCarteraInvoice">
           <DataField>GetCarteraInvoice</DataField>
         </Field>
+        <Field Name="PrecioUnitario">
+          <DataField>PrecioUnitario</DataField>
+        </Field>
+        <Field Name="PrecioUnitarioFormat">
+          <DataField>PrecioUnitarioFormat</DataField>
+        </Field>
         <Field Name="LineAmt_SalesInvoiceLine">
           <DataField>LineAmt_SalesInvoiceLine</DataField>
         </Field>
@@ -459,6 +471,9 @@ End Function
         </Field>
         <Field Name="IsLineWithTotals">
           <DataField>IsLineWithTotals</DataField>
+        </Field>
+        <Field Name="UdPriceCaption">
+          <DataField>UdPriceCaption</DataField>
         </Field>
         <Field Name="PostingDate_SalesShipmentBuffer">
           <DataField>PostingDate_SalesShipmentBuffer</DataField>

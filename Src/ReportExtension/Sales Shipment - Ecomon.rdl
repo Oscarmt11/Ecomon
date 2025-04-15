@@ -3132,6 +3132,12 @@ End Function
         <Field Name="PageCaption">
           <DataField>PageCaption</DataField>
         </Field>
+        <Field Name="DeliveryCaption">
+          <DataField>DeliveryCaption</DataField>
+        </Field>
+        <Field Name="RouteCaption">
+          <DataField>RouteCaption</DataField>
+        </Field>
         <Field Name="CompanyInfo2Picture">
           <DataField>CompanyInfo2Picture</DataField>
         </Field>
@@ -3440,6 +3446,9 @@ End Function
         </Field>
         <Field Name="VentorItemNo_SalesShipLine">
           <DataField>VentorItemNo_SalesShipLine</DataField>
+        </Field>
+        <Field Name="UdPriceCaption">
+          <DataField>UdPriceCaption</DataField>
         </Field>
         <Field Name="DimText1">
           <DataField>DimText1</DataField>
