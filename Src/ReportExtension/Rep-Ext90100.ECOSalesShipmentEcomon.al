@@ -11,10 +11,10 @@ reportextension 90100 "ECOSales - Shipment - Ecomon" extends "Sales - Shipment -
             column(ECOObservations; "Sales Shipment Header".ECOObservations)
             {
             }
-            column(ECOdeliveryCode; ECOdeliveryCode)
+            column(ECOdeliveryCode; Getdelivery("Order No."))
             {
             }
-            column(ECORouteCode; ECORouteCode)
+            column(ECORouteCode; GetRoute("Order No."))
             {
             }
         }
@@ -29,6 +29,7 @@ reportextension 90100 "ECOSales - Shipment - Ecomon" extends "Sales - Shipment -
     VAR
         TenatMedia: Record "Tenant Media";
         SalesShptHeader: Record "Sales Shipment Header";
+        SalesHeader: Record "Sales Header";
 
     local procedure GetSignImage(): text
     begin
@@ -36,7 +37,17 @@ reportextension 90100 "ECOSales - Shipment - Ecomon" extends "Sales - Shipment -
             if TenatMedia.Get("Sales Shipment Header".ECNSing.Item(1)) then
                 TenatMedia.CalcFields(Content);
         end;
+    end;
 
+    local procedure GetRoute(OrderNo: Code[20]): Code[20]
+    begin
+        if SalesHeader.Get(SalesHeader."Document Type"::Order, OrderNo) then
+            exit(SalesHeader."ECORouteCode");
+    end;
 
+    local procedure Getdelivery(OrderNo: Code[20]): Code[20]
+    begin
+        if SalesHeader.Get(SalesHeader."Document Type"::Order, OrderNo) then
+            exit(SalesHeader."ECOdeliveryCode");
     end;
 }
