@@ -11,10 +11,16 @@ reportextension 90100 "ECOSales - Shipment - Ecomon" extends "Sales - Shipment -
             column(ECOObservations; "Sales Shipment Header".ECOObservations)
             {
             }
-            column(ECOdeliveryCode; Getdelivery("Order No."))
+            column(ECOdeliveryCode; ECOdeliveryCode)
             {
             }
-            column(ECORouteCode; GetRoute("Order No."))
+            column(ECORouteCode; ECORouteCode)
+            {
+            }
+        }
+        add("Sales Shipment Line")
+        {
+            Column(udPrice; "Unit Price")
             {
             }
         }
