@@ -9,7 +9,7 @@
       <am:Name>MSRB</am:Name>
       <am:Version>15.0.20283.0</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2025-03-13T13:37:47.5706678Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2025-04-21T16:35:41.9859934Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -45,7 +45,7 @@
                               <TablixBody>
                                 <TablixColumns>
                                   <TablixColumn>
-                                    <Width>2.19804cm</Width>
+                                    <Width>2.30613cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
                                     <Width>0.86466cm</Width>
@@ -72,7 +72,7 @@
                                     <Width>0.86065cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>1.87786cm</Width>
+                                    <Width>1.30994cm</Width>
                                   </TablixColumn>
                                 </TablixColumns>
                                 <TablixRows>
@@ -1024,6 +1024,7 @@
                                                       <FontStyle>Normal</FontStyle>
                                                       <FontFamily>Arial Narrow</FontFamily>
                                                       <FontSize>8pt</FontSize>
+                                                      <Format>0.000;(0.000)</Format>
                                                     </Style>
                                                   </TextRun>
                                                 </TextRuns>
@@ -1695,7 +1696,7 @@
                                 </Filter>
                               </Filters>
                               <Height>2.15196cm</Height>
-                              <Width>19.80765cm</Width>
+                              <Width>19.34782cm</Width>
                               <Visibility>
                                 <Hidden>=IIF(Fields!LineNo_SalesShptLine.Value &lt;&gt; 0,False,True)</Hidden>
                               </Visibility>
@@ -1750,7 +1751,8 @@ Cstr(Fields!Comment_Customer.Value) + Chr(177) +
 Cstr(Fields!No_SalesShptHeader.Value) + Chr(177) +
 Cstr(Fields!DocDate_SalesShptHeader.Value) + Chr(177) +
 Cstr(Fields!SelltoCustNo_SalesShptHeader.Value) + Chr(177) +
-Cstr(Fields!SalesPurchPersonName.Value) + Chr(177) + Cstr(Fields!ECOObservations.Value) , 1)</Hidden>
+Cstr(Fields!SalesPurchPersonName.Value) + Chr(177) + Cstr(Fields!ECOObservations.Value) + Chr(177) +
+Cstr(Fields!ECORouteCode.Value) , 1)</Hidden>
                                             </Visibility>
                                             <Style>
                                               <Border>
@@ -1758,7 +1760,6 @@ Cstr(Fields!SalesPurchPersonName.Value) + Chr(177) + Cstr(Fields!ECOObservations
                                               </Border>
                                             </Style>
                                           </Textbox>
-                                          <rd:Selected>true</rd:Selected>
                                         </CellContents>
                                       </TablixCell>
                                     </TablixCells>
@@ -2072,7 +2073,7 @@ Cstr(Fields!SalesPurchPersonName.Value) + Chr(177) + Cstr(Fields!ECOObservations
       <Width>20.48385cm</Width>
       <Page>
         <PageHeader>
-          <Height>7.03792cm</Height>
+          <Height>7.17021cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -2447,8 +2448,8 @@ Cstr(Fields!SalesPurchPersonName.Value) + Chr(177) + Cstr(Fields!ECOObservations
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>169.96479pt</Top>
-              <Left>1cm</Left>
+              <Top>168.37014pt</Top>
+              <Left>0.38986cm</Left>
               <Height>11pt</Height>
               <Width>1.88692cm</Width>
               <ZIndex>12</ZIndex>
@@ -2476,9 +2477,9 @@ Cstr(Fields!SalesPurchPersonName.Value) + Chr(177) + Cstr(Fields!ECOObservations
                 </Paragraph>
               </Paragraphs>
               <Top>179.37014pt</Top>
-              <Left>5cm</Left>
+              <Left>4.09176cm</Left>
               <Height>11pt</Height>
-              <Width>1.92774cm</Width>
+              <Width>1.67414cm</Width>
               <ZIndex>13</ZIndex>
               <Style>
                 <Border />
@@ -2506,9 +2507,9 @@ Cstr(Fields!SalesPurchPersonName.Value) + Chr(177) + Cstr(Fields!ECOObservations
                 </Paragraph>
               </Paragraphs>
               <Top>179.37014pt</Top>
-              <Left>3cm</Left>
+              <Left>2.36862cm</Left>
               <Height>11pt</Height>
-              <Width>1.99097cm</Width>
+              <Width>1.68786cm</Width>
               <ZIndex>14</ZIndex>
               <Style>
                 <Border />
@@ -2629,9 +2630,9 @@ Cstr(Fields!SalesPurchPersonName.Value) + Chr(177) + Cstr(Fields!ECOObservations
                 </Paragraph>
               </Paragraphs>
               <Top>179.37014pt</Top>
-              <Left>1cm</Left>
+              <Left>0.38986cm</Left>
               <Height>11pt</Height>
-              <Width>1.88692cm</Width>
+              <Width>1.93887cm</Width>
               <ZIndex>18</ZIndex>
               <Style>
                 <Border>
@@ -2659,9 +2660,9 @@ Cstr(Fields!SalesPurchPersonName.Value) + Chr(177) + Cstr(Fields!ECOObservations
                 </Paragraph>
               </Paragraphs>
               <Top>179.37014pt</Top>
-              <Left>7cm</Left>
-              <Height>0.4198cm</Height>
-              <Width>2.03358cm</Width>
+              <Left>5.87173cm</Left>
+              <Height>11pt</Height>
+              <Width>1.30094cm</Width>
               <ZIndex>19</ZIndex>
               <Style>
                 <Border>
@@ -2757,6 +2758,62 @@ Cstr(Fields!SalesPurchPersonName.Value) + Chr(177) + Cstr(Fields!ECOObservations
                 <VerticalAlign>Middle</VerticalAlign>
               </Style>
             </Textbox>
+            <Textbox Name="SalesPurchPersonName2">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Code.GetData(20,1)</Value>
+                      <Style>
+                        <FontStyle>Normal</FontStyle>
+                        <FontFamily>Arial Narrow</FontFamily>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>179.37014pt</Top>
+              <Left>7.4055cm</Left>
+              <Height>11pt</Height>
+              <Width>0.97338cm</Width>
+              <ZIndex>23</ZIndex>
+              <Style>
+                <VerticalAlign>Middle</VerticalAlign>
+              </Style>
+            </Textbox>
+            <Textbox Name="SalesPurchPersonName3">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Code.GetData(19,1)</Value>
+                      <Style>
+                        <FontStyle>Normal</FontStyle>
+                        <FontFamily>Arial Narrow</FontFamily>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>179.37014pt</Top>
+              <Left>8.37888cm</Left>
+              <Height>11pt</Height>
+              <Width>1.28523cm</Width>
+              <ZIndex>24</ZIndex>
+              <Style>
+                <VerticalAlign>Middle</VerticalAlign>
+              </Style>
+            </Textbox>
           </ReportItems>
           <Style />
         </PageHeader>
@@ -2787,8 +2844,8 @@ Cstr(Fields!SalesPurchPersonName.Value) + Chr(177) + Cstr(Fields!ECOObservations
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Total_VAT_LineAmount</rd:DefaultName>
-              <Top>2.07244cm</Top>
-              <Left>1.34699cm</Left>
+              <Top>2.61496cm</Top>
+              <Left>1.50915cm</Left>
               <Height>0.52062cm</Height>
               <Width>2.5cm</Width>
               <Style>
@@ -2823,8 +2880,8 @@ Cstr(Fields!SalesPurchPersonName.Value) + Chr(177) + Cstr(Fields!ECOObservations
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Total_VAT_InvoiceDiscountAmount</rd:DefaultName>
-              <Top>2.07244cm</Top>
-              <Left>5.89494cm</Left>
+              <Top>2.61496cm</Top>
+              <Left>5.36789cm</Left>
               <Height>0.52062cm</Height>
               <Width>2.5cm</Width>
               <ZIndex>1</ZIndex>
@@ -2860,8 +2917,8 @@ Cstr(Fields!SalesPurchPersonName.Value) + Chr(177) + Cstr(Fields!ECOObservations
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Total_VAT_VATECbase</rd:DefaultName>
-              <Top>2.07244cm</Top>
-              <Left>12.70965cm</Left>
+              <Top>2.61496cm</Top>
+              <Left>13.00214cm</Left>
               <Height>0.52062cm</Height>
               <Width>2.5cm</Width>
               <ZIndex>2</ZIndex>
@@ -2897,8 +2954,8 @@ Cstr(Fields!SalesPurchPersonName.Value) + Chr(177) + Cstr(Fields!ECOObservations
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Total_VAT_VATAmount</rd:DefaultName>
-              <Top>2.07244cm</Top>
-              <Left>16.55061cm</Left>
+              <Top>2.61496cm</Top>
+              <Left>16.00151cm</Left>
               <Height>0.52062cm</Height>
               <Width>1.64452cm</Width>
               <ZIndex>3</ZIndex>
@@ -2934,8 +2991,8 @@ Cstr(Fields!SalesPurchPersonName.Value) + Chr(177) + Cstr(Fields!ECOObservations
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Total_VAT_AmountInclVAT</rd:DefaultName>
-              <Top>2.07244cm</Top>
-              <Left>18.37151cm</Left>
+              <Top>2.61496cm</Top>
+              <Left>18.01749cm</Left>
               <Height>0.52062cm</Height>
               <Width>1.54442cm</Width>
               <ZIndex>4</ZIndex>
@@ -2979,7 +3036,6 @@ Cstr(Fields!SalesPurchPersonName.Value) + Chr(177) + Cstr(Fields!ECOObservations
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox114</rd:DefaultName>
-              <Top>0.20691cm</Top>
               <Left>0.9937cm</Left>
               <Height>0.8867cm</Height>
               <Width>18.01951cm</Width>
@@ -3560,6 +3616,12 @@ End Function
         </Field>
         <Field Name="ECORouteCode">
           <DataField>ECORouteCode</DataField>
+        </Field>
+        <Field Name="udPrice">
+          <DataField>udPrice</DataField>
+        </Field>
+        <Field Name="udPriceFormat">
+          <DataField>udPriceFormat</DataField>
         </Field>
       </Fields>
       <Query>
