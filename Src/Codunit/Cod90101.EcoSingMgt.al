@@ -121,6 +121,16 @@ codeunit 90101 EcoSingMgt
         if not Item.Get(ItemNo) then
             Error(Text003);
 
+        ItemJournalLine.Reset();
+        ItemJournalLine.SetRange("Journal Template Name", SalesReceivablesSetup."Journal Template Name");
+        ItemJournalLine.SetRange("Journal Batch Name", SalesReceivablesSetup."Journal Batch Name");
+        ItemJournalLine.SetRange("Document No.", 'AjusteAPP');
+        ItemJournalLine.SetRange("Item No.", ItemNo);
+
+        if ItemJournalLine.FindLast() then
+            if not ItemJournalPost.Run(ItemJournalLine) then
+                Error(GetLastErrorText());
+
         ItemJournalLine.Init();
         ItemJournalLine.Validate("Journal Template Name", SalesReceivablesSetup."Journal Template Name");
         ItemJournalLine.Validate("Journal Batch Name", SalesReceivablesSetup."Journal Batch Name");
