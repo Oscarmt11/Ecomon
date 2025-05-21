@@ -51,7 +51,10 @@ page 90101 ECOSalesShipmentHeader
                 {
                     ApplicationArea = ALL;
                 }
-
+                field(SystemCreatedAt; Rec.SystemCreatedAt)
+                {
+                    ApplicationArea = all;
+                }
             }
         }
     }

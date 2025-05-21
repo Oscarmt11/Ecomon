@@ -31,6 +31,10 @@ pageextension 90111 "ECOPostedSalesShipments" extends "Posted Sales Shipments"
         }
         addbefore(ECOObservations)
         {
+            field(ECOdeliveryCode; REC.ECOdeliveryCode)
+            {
+                ApplicationArea = ALL;
+            }
             field(AutoInvoicing; Rec.AutoInvoicing)
             {
                 ApplicationArea = All;
