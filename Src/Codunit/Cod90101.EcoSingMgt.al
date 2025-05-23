@@ -10,13 +10,14 @@ codeunit 90101 EcoSingMgt
     var
 
 
-    procedure InsertSing(ShippingNo: text[20]; SingNo: text; Observations: Text): text
+    procedure InsertSing(ShippingNo: text[20]; SingNo: text; Observations: Text; Invoice: Boolean): text
     var
         TempBlob: codeunit "Temp Blob";
         Base64: Codeunit "Base64 Convert";
         Outstr: OutStream;
         InStr: InStream;
         SalesShipmentHeader: Record "Sales Shipment Header";
+        SalesinvoiceHeader: Record "Sales Invoice Header";
     begin
         SalesShipmentHeader.SetRange("No.", ShippingNo);
         IF NOT SalesShipmentHeader.FindFirst() THEN
@@ -25,23 +26,47 @@ codeunit 90101 EcoSingMgt
         TempBlob.CreateOutStream(OutStr);
         Base64.FromBase64(SingNo, OutStr);
         TempBlob.CreateInStream(InStr);
-        SalesShipmentHeader.ECNSing.ImportStream(InStr, '*.png');
-        SalesShipmentHeader.Validate(ECNSinged, true);
-        SalesShipmentHeader.Validate(ECOObservations, Observations);
-        SalesShipmentHeader.MODIFY(true);
-        SalesShipmentHeader.CalcFields(ECOSendByemail);
+        if invoice then begin
+            SalesinvoiceHeader.ECNSing.ImportStream(InStr, '*.png');
+            SalesinvoiceHeader.Validate(ECNSinged, true);
+            SalesinvoiceHeader.Validate(ECOObservations, Observations);
+            SalesinvoiceHeader.MODIFY(true);
+            SalesinvoiceHeader.CalcFields(ECOSendByemail);
+        end else begin
+            SalesShipmentHeader.ECNSing.ImportStream(InStr, '*.png');
+            SalesShipmentHeader.Validate(ECNSinged, true);
+            SalesShipmentHeader.Validate(ECOObservations, Observations);
+            SalesShipmentHeader.MODIFY(true);
+            SalesShipmentHeader.CalcFields(ECOSendByemail);
+        end;
+
+
         Commit();
         if SalesShipmentHeader.ECOSendByemail then begin
-            if SendSalesShipmentHeader(SalesShipmentHeader) then begin
-                SalesShipmentHeader.SetRange("No.", ShippingNo);
-                IF SalesShipmentHeader.FindFirst() THEN begin
-                    SalesShipmentHeader.Validate(SalesShipmentHeader.ECNSEmailSent, true);
-                    SalesShipmentHeader.Validate(ECNEmailError, '');
-                    SalesShipmentHeader.Validate("ECNEmailSentDate", Today);
+            if Invoice then begin
+                if SendSalesShipmentHeader(SalesShipmentHeader, SalesinvoiceHeader, true) then begin
+                    SalesinvoiceHeader.SetRange("No.", ShippingNo);
+                    IF SalesinvoiceHeader.FindFirst() THEN begin
+                        SalesinvoiceHeader.Validate(SalesinvoiceHeader.ECNSEmailSent, true);
+                        SalesinvoiceHeader.Validate(ECNEmailError, '');
+                        SalesinvoiceHeader.Validate("ECNEmailSentDate", Today);
+                    end;
+                    Commit();
+                    SalesinvoiceHeader.MODIFY(true);
                 end;
-                Commit();
-                SalesShipmentHeader.MODIFY(true);
+            end else begin
+                if SendSalesShipmentHeader(SalesShipmentHeader) then begin
+                    SalesShipmentHeader.SetRange("No.", ShippingNo);
+                    IF SalesShipmentHeader.FindFirst() THEN begin
+                        SalesShipmentHeader.Validate(SalesShipmentHeader.ECNSEmailSent, true);
+                        SalesShipmentHeader.Validate(ECNEmailError, '');
+                        SalesShipmentHeader.Validate("ECNEmailSentDate", Today);
+                    end;
+                    Commit();
+                    SalesShipmentHeader.MODIFY(true);
+                end;
             end;
+
         end;
         EXIT('OK');
     end;
@@ -81,6 +106,46 @@ codeunit 90101 EcoSingMgt
             SalesSetup.EcoBodyEmail := StrSubstNo(SalesSetup.EcoBodyEmail, SalesShipmentHeaderParam."No.");
             EmailMessage.Create(Customer."E-Mail" + ';it@ecomon.net', SalesSetup.ECOSubjetEmail, SalesSetup.EcoBodyEmail, true);
             EmailMessage.AddAttachment(SalesShipmentHeaderParam."No." + '.pdf', 'application/pdf', Base64Result);
+            if Email.Send(EmailMessage, Enum::"Email Scenario"::"Sales Order") then
+                exit(true);
+        end;
+    end;
+
+    procedure SendSalesShipmentHeader(SalesShipmentHeaderParam: Record "Sales Shipment Header"; SalesInvheder: Record "Sales Invoice Header"; Invoice: Boolean): Boolean
+    var
+        SalesSetup: Record "Sales & Receivables Setup";
+        InfEmpresa: record "Company Information";
+        Customer: Record Customer;
+        Email: Codeunit Email;
+        EmailMessage: Codeunit "Email Message";
+        TempBlob: Codeunit "Temp Blob";
+        InStr: Instream;
+        OutStr: OutStream;
+        ReportParameters, FileName, Base64Result, logo : Text;
+        FileManagment: codeunit "File Management";
+        BASE64: Codeunit "Base64 Convert";
+        inst: InStream;
+        recRef: RecordRef;
+        TenantMedia: Record "Tenant Media";
+    begin
+        if not Customer.get(SalesInvheder."Sell-to Customer No.") then
+            exit;
+
+        if not SalesSetup.Get() then
+            exit;
+        SalesSetup.TestField(ECOSubjetEmail);
+        SalesSetup.TestField(EcoBodyEmail);
+        //SalesShimpemntHeaderReport.Get(DocumentNo);
+        SalesInvheder.SetRange("No.", SalesInvheder."No.");
+        recRef.GetTable(SalesInvheder);
+        TempBlob.CreateOutStream(OutStr);
+        if Report.SaveAs(Report::"Sales Invoice Ecomon", '', ReportFormat::Pdf, OutStr, recRef) then begin
+            TempBlob.CreateInStream(InStr);
+            Base64Result := BASE64.ToBase64(InStr, true);
+            SalesSetup.ECOSubjetEmail := StrSubstNo(SalesSetup.ECOSubjetEmail, SalesInvheder."No.");
+            SalesSetup.EcoBodyEmail := StrSubstNo(SalesSetup.EcoBodyEmail, SalesInvheder."No.");
+            EmailMessage.Create(Customer."E-Mail" + ';it@ecomon.net', SalesSetup.ECOSubjetEmail, SalesSetup.EcoBodyEmail, true);
+            EmailMessage.AddAttachment(SalesInvheder."No." + '.pdf', 'application/pdf', Base64Result);
             if Email.Send(EmailMessage, Enum::"Email Scenario"::"Sales Order") then
                 exit(true);
         end;
