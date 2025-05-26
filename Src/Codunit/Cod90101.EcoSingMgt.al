@@ -107,7 +107,7 @@ codeunit 90101 EcoSingMgt
         end;
     end;
 
-    procedure CreateAndPostItemJournalLine(ItemNo: Code[20]; Quantity: Decimal)
+    procedure CreateAndPostItemJournalLine(ItemNo: Code[20]; Quantity: Decimal; Customer: Code[20])
     var
         ItemJournalLine: Record "Item Journal Line";
         ItemJournalPost: Codeunit "Item Jnl.-Post Batch";
@@ -141,6 +141,8 @@ codeunit 90101 EcoSingMgt
         ItemJournalLine.Validate("Entry Type", ItemJournalLine."Entry Type"::"Negative Adjmt.");
         ItemJournalLine.Validate("Location Code", 'ALMACEN');
         ItemJournalLine.Validate(Quantity, Quantity);
+        ItemJournalLine.Validate("Source Type", ItemJournalLine."Source Type"::Customer);
+        ItemJournalLine.Validate("Source No.", Customer);
         //ItemJournalLine.Validate("Bin Code", 'BAJO')
         // ItemJournalLine.Validate("Quantity (Base)", Quantity);
         // ItemJournalLine.Validate("Invoiced Quantity", Quantity);
