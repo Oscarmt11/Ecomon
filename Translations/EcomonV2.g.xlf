@@ -18,6 +18,21 @@
           <note from="Developer" annotates="general" priority="2">ESP="Descripcion repartidor"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page ECOdeliverysApi - Control ECODeliveryDescription - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 3034419841 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Change delivery Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cambio de código repartidor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report ECOChangeECOdeliveryCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3034419841 - Control 1899973656 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>New delivery code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nuevo código repartidor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report ECOChangeECOdeliveryCode - Control NewecoDeliveryCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1673202573 - Action 3248572793 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1840709038">
+          <source>Change delivery Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cambio de código repartidor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ECOPostedSalesShipments - Action ChangeDeliveryCode - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3109311650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Deliverys</source>
           <note from="Developer" annotates="general" priority="2">ESP="Repartidores"</note>
@@ -152,11 +167,6 @@
           <source>Create and Post Item Journal Line</source>
           <note from="Developer" annotates="general" priority="2">ESP="Crear e Insertar líneas en Diario de Productos"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ECOItemJournal - Action CreateAndPostItemJournalLine - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 3049533740 - Action 1692444235 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3373253667">
-          <source>aa</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ECOPostedSalesShipment - Action ActionName - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 3049533740 - Action 296506339 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3373253667">
           <source>Update Document</source>
