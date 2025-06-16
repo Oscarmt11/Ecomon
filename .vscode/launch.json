@@ -2,11 +2,11 @@
     "version": "0.2.0",
         "configurations": [
         {
-            "name": "Copy_26_03_25",
+            "name": "Copia_21_05_25",
             "request": "launch",
             "type": "al",
             "environmentType": "Sandbox",
-            "environmentName": "Copy_26_03_25",
+            "environmentName": "Copia_21_05_25",
             "startupObjectId": 29,
             "startupObjectType": "Page",
             "breakOnError": "All",
@@ -17,11 +17,11 @@
             "schemaUpdateMode": "Synchronize"
         },
         {
-            "name": "Copia_DeRestauracion",
+            "name": "Copia_04_06_2025",
             "request": "launch",
             "type": "al",
             "environmentType": "Sandbox",
-            "environmentName": "Copia_DeRestauracion",
+            "environmentName": "Copia_04_06_2025",
             "startupObjectId": 29,
             "startupObjectType": "Page",
             "breakOnError": "All",

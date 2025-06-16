@@ -74,7 +74,7 @@ codeunit 90101 EcoSingMgt
         SalesShipmentHeaderParam.SetRange("No.", SalesShipmentHeaderParam."No.");
         recRef.GetTable(SalesShipmentHeaderParam);
         TempBlob.CreateOutStream(OutStr);
-        if Report.SaveAs(Report::"Sales - Shipment - Ecomon", '', ReportFormat::Pdf, OutStr, recRef) then begin
+        if Report.SaveAs(Report::"Sales - Shipment - Ecomon logo", '', ReportFormat::Pdf, OutStr, recRef) then begin
             TempBlob.CreateInStream(InStr);
             Base64Result := BASE64.ToBase64(InStr, true);
             SalesSetup.ECOSubjetEmail := StrSubstNo(SalesSetup.ECOSubjetEmail, SalesShipmentHeaderParam."No.");
