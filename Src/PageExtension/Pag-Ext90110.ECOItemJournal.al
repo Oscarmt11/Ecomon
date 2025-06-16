@@ -18,7 +18,7 @@ pageextension 90110 ECOItemJournal extends "Item Journal"
                     var
                         EcoSingMgt: Codeunit EcoSingMgt;
                     begin
-                        EcoSingMgt.CreateAndPostItemJournalLine('0000990-05', 1);
+                        EcoSingMgt.CreateAndPostItemJournalLine('3500468', 1, '001994');
                     end;
                 }
             }
