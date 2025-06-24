@@ -74,7 +74,7 @@ codeunit 90101 EcoSingMgt
         SalesShipmentHeaderParam.SetRange("No.", SalesShipmentHeaderParam."No.");
         recRef.GetTable(SalesShipmentHeaderParam);
         TempBlob.CreateOutStream(OutStr);
-        if Report.SaveAs(Report::"Sales - Shipment - Ecomon", '', ReportFormat::Pdf, OutStr, recRef) then begin
+        if Report.SaveAs(Report::"Sales - Shipment - Ecomon logo", '', ReportFormat::Pdf, OutStr, recRef) then begin
             TempBlob.CreateInStream(InStr);
             Base64Result := BASE64.ToBase64(InStr, true);
             SalesSetup.ECOSubjetEmail := StrSubstNo(SalesSetup.ECOSubjetEmail, SalesShipmentHeaderParam."No.");
@@ -107,7 +107,7 @@ codeunit 90101 EcoSingMgt
         end;
     end;
 
-    procedure CreateAndPostItemJournalLine(ItemNo: Code[20]; Quantity: Decimal)
+    procedure CreateAndPostItemJournalLine(ItemNo: Code[20]; Quantity: Decimal; Customer: Code[20])
     var
         ItemJournalLine: Record "Item Journal Line";
         ItemJournalPost: Codeunit "Item Jnl.-Post Batch";
@@ -121,6 +121,16 @@ codeunit 90101 EcoSingMgt
         if not Item.Get(ItemNo) then
             Error(Text003);
 
+        ItemJournalLine.Reset();
+        ItemJournalLine.SetRange("Journal Template Name", SalesReceivablesSetup."Journal Template Name");
+        ItemJournalLine.SetRange("Journal Batch Name", SalesReceivablesSetup."Journal Batch Name");
+        ItemJournalLine.SetRange("Document No.", 'AjusteAPP');
+        ItemJournalLine.SetRange("Item No.", ItemNo);
+
+        if ItemJournalLine.FindLast() then
+            if not ItemJournalPost.Run(ItemJournalLine) then
+                Error(GetLastErrorText());
+
         ItemJournalLine.Init();
         ItemJournalLine.Validate("Journal Template Name", SalesReceivablesSetup."Journal Template Name");
         ItemJournalLine.Validate("Journal Batch Name", SalesReceivablesSetup."Journal Batch Name");
@@ -131,6 +141,8 @@ codeunit 90101 EcoSingMgt
         ItemJournalLine.Validate("Entry Type", ItemJournalLine."Entry Type"::"Negative Adjmt.");
         ItemJournalLine.Validate("Location Code", 'ALMACEN');
         ItemJournalLine.Validate(Quantity, Quantity);
+        ItemJournalLine.Validate("Source Type", ItemJournalLine."Source Type"::Customer);
+        ItemJournalLine.Validate("Source No.", Customer);
         //ItemJournalLine.Validate("Bin Code", 'BAJO')
         // ItemJournalLine.Validate("Quantity (Base)", Quantity);
         // ItemJournalLine.Validate("Invoiced Quantity", Quantity);
