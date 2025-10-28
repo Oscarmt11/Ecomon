@@ -79,7 +79,7 @@ codeunit 90101 EcoSingMgt
             Base64Result := BASE64.ToBase64(InStr, true);
             SalesSetup.ECOSubjetEmail := StrSubstNo(SalesSetup.ECOSubjetEmail, SalesShipmentHeaderParam."No.");
             SalesSetup.EcoBodyEmail := StrSubstNo(SalesSetup.EcoBodyEmail, SalesShipmentHeaderParam."No.");
-            EmailMessage.Create(Customer."E-Mail" + ';it@ecomon.net', SalesSetup.ECOSubjetEmail, SalesSetup.EcoBodyEmail, true);
+            EmailMessage.Create(Customer."E-Mail", SalesSetup.ECOSubjetEmail, SalesSetup.EcoBodyEmail, true);
             EmailMessage.AddAttachment(SalesShipmentHeaderParam."No." + '.pdf', 'application/pdf', Base64Result);
             if Email.Send(EmailMessage, Enum::"Email Scenario"::"Sales Order") then
                 exit(true);
