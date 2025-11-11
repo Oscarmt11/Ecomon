@@ -39,15 +39,17 @@ page 90106 "Off-season"
                 var
                     Item: Record Item;
                 begin
-                    if (WorkDate() >= Rec.InitDate) and (WorkDate() <= Rec.EndingDate) then begin
-                        item.setfilter("Safety Stock Quantity", '<>0');
-                        if item.FindFirst() then
-                            repeat
-                                Item.Validate("Up-season stock", Item."Safety Stock Quantity");
-                                item.Validate(item."Safety Stock Quantity", item."Off-season stock");
-                                item.Modify();
-                            until item.Next() = 0;
-                    end;
+                    item.setfilter("Safety Stock Quantity", '<>0');
+                    if item.FindFirst() then
+                        repeat
+                            if (WorkDate() >= Rec.InitDate) and (WorkDate() <= Rec.EndingDate) then begin
+
+                            end;
+                            Item.Validate("Up-season stock", Item."Safety Stock Quantity");
+                            item.Validate(item."Safety Stock Quantity", item."Off-season stock");
+                            item.Modify();
+                        until item.Next() = 0;
+
 
                 end;
             }
