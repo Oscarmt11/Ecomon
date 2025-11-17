@@ -6,6 +6,7 @@ page 90100 Segmentos
     SourceTable = Segmentos;
     UsageCategory = Lists;
 
+
     layout
     {
         area(content)
