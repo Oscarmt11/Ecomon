@@ -17,11 +17,11 @@
             "schemaUpdateMode": "Synchronize"
         },
         {
-            "name": "Copia_04_06_2025",
+            "name": "TEST_CLIENT_22_09_25",
             "request": "launch",
             "type": "al",
             "environmentType": "Sandbox",
-            "environmentName": "Copia_04_06_2025",
+            "environmentName": "TEST_CLIENT_22_09_25",
             "startupObjectId": 29,
             "startupObjectType": "Page",
             "breakOnError": "All",
@@ -32,11 +32,11 @@
             "schemaUpdateMode": "Synchronize"
         },
         {
-            "name": "Dev_07_05_25",
+            "name": "DEV_03_11_25",
             "request": "launch",
             "type": "al",
             "environmentType": "Sandbox",
-            "environmentName": "Dev_07_05_25",
+            "environmentName": "DEV_03_11_25",
             "startupObjectId": 29,
             "startupObjectType": "Page",
             "breakOnError": "All",

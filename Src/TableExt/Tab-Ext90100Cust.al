@@ -34,10 +34,12 @@ tableextension 90100 Cust extends Customer
         field(90140; "Off-season Route Code"; Code[20])
         {
             Caption = 'Off-season Route Code', Comment = 'ESP="Código ruta temporada baja"';
+            TableRelation = EcoRoutes.EcoRouteCode;
         }
         field(90145; "Up-season Route Code"; Code[20])
         {
             Caption = 'Up-season Route Code', Comment = 'ESP="Código ruta temporada alta"';
+            TableRelation = EcoRoutes.EcoRouteCode;
         }
 
     }

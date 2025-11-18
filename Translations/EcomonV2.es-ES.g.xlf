@@ -32,6 +32,18 @@
           <note from="Developer" annotates="general" priority="2">ESP="Actualizar valores para artículos fuera de temporada"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Off-season - Action ActionName - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1286816671 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Off-season Routes</source>
+          <target state="translated">Fechas Temporada baja (rutas)</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fechas Temporada baja (rutas)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Off-season Routes - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1286816671 - Action 66893675 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Update off-season routes</source>
+          <target state="translated">Actualizar rutas de temporada baja</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Actualizar rutas de temporada baja"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Off-season Routes - Action UpdateOffSeasonRoutes - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1753907007 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Off-season</source>
           <target state="translated">Fechas Temporada alta</target>
@@ -43,6 +55,18 @@
           <target state="translated">Actualizar valores para artículos en temporada alta</target>
           <note from="Developer" annotates="general" priority="2">ESP="Actualizar valores para artículos en temporada alta"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Up-season - Action ActionName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2244984185 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Up-season Routes</source>
+          <target state="translated">Fechas Temporada alta (rutas)</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fechas Temporada alta (rutas)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Up-season Routes - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2244984185 - Action 2487025853 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Update up-season routes</source>
+          <target state="translated">Actualizar rutas de temporada alta</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Actualizar rutas de temporada alta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Up-season Routes - Action UpdateUpSeasonRoutes - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 3034419841 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Change delivery Code</source>
