@@ -1,12 +1,12 @@
 namespace Ecomon.Ecomon;
 using Microsoft.Inventory.Item;
 
-page 90106 "Off-season"
+page 90107 "Up-season"
 {
     ApplicationArea = All;
-    Caption = 'Off-season', Comment = 'ESP="Fechas Temporada baja"';
+    Caption = 'Off-season', Comment = 'ESP="Fechas Temporada alta"';
     PageType = List;
-    SourceTable = "Off-season";
+    SourceTable = "Up-season";
     UsageCategory = Lists;
 
     layout
@@ -32,7 +32,7 @@ page 90106 "Off-season"
         {
             action(ActionName)
             {
-                Caption = 'Update values for off-season items', Comment = 'ESP="Actualizar valores para artículos fuera de temporada"';
+                Caption = 'Update values for up-season items', Comment = 'ESP="Actualizar valores para artículos en temporada alta"';
                 ApplicationArea = all;
                 Image = update;
                 trigger OnAction()
@@ -43,8 +43,8 @@ page 90106 "Off-season"
                     if item.FindFirst() then
                         repeat
                             if (WorkDate() >= Rec.InitDate) and (WorkDate() <= Rec.EndingDate) then begin
-                                Item.Validate("Up-season stock", Item."Safety Stock Quantity");
-                                item.Validate(item."Safety Stock Quantity", item."Off-season stock");
+                                Item.Validate("Off-season stock", Item."Safety Stock Quantity");
+                                item.Validate(item."Safety Stock Quantity", item."Up-season stock");
                                 item.Modify();
                             end;
                         until item.Next() = 0;

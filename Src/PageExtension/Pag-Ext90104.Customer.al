@@ -24,9 +24,17 @@ pageextension 90104 Customer extends "Customer Card"
             {
                 ApplicationArea = All;
             }
-
-
-
+        }
+        addafter(ECORouteCode)
+        {
+            field("Off-season Route Code"; Rec."Off-season Route Code")
+            {
+                ApplicationArea = All;
+            }
+            field("Up-season Route Code"; Rec."Up-season Route Code")
+            {
+                ApplicationArea = All;
+            }
         }
     }
 }

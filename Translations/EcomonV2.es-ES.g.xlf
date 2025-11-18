@@ -20,6 +20,30 @@
           <note from="Developer" annotates="general" priority="2">ESP="Descripcion repartidor"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page ECOdeliverysApi - Control ECODeliveryDescription - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1981859977 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Off-season</source>
+          <target state="translated">Fechas Temporada baja</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fechas Temporada baja"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Off-season - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1981859977 - Action 1692444235 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Update values for off-season items</source>
+          <target state="translated">Actualizar valores para artículos fuera de temporada</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Actualizar valores para artículos fuera de temporada"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Off-season - Action ActionName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1753907007 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Off-season</source>
+          <target state="translated">Fechas Temporada alta</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fechas Temporada alta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Up-season - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1753907007 - Action 1692444235 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Update values for up-season items</source>
+          <target state="translated">Actualizar valores para artículos en temporada alta</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Actualizar valores para artículos en temporada alta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Up-season - Action ActionName - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 3034419841 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Change delivery Code</source>
           <target state="translated">Cambio de código repartidor</target>
@@ -37,6 +61,18 @@
           <target state="translated">Cambio de código repartidor</target>
           <note from="Developer" annotates="general" priority="2">ESP="Cambio de código repartidor"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ECOPostedSalesShipments - Action ChangeDeliveryCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2785192472 - Field 3457007009 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Off-season stock</source>
+          <target state="translated">Stock temporada baja</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Stock temporada baja"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECoItem - Field Off-season stock - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2785192472 - Field 2983589815 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Off-season stock</source>
+          <target state="translated">Stock temporada alta</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Stock temporada alta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECoItem - Field Up-season stock - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3109311650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Deliverys</source>
@@ -74,6 +110,30 @@
           <note from="Developer" annotates="general" priority="2">ESP="Descripción de la ruta"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table EcoRoutes - Field EcoRouteDescription - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1981859977 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Off-season</source>
+          <target state="translated">Fechas Temporada baja</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fechas Temporada baja"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Off-season - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1981859977 - Field 3592094765 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ending Date</source>
+          <target state="translated">Fecha de fin temporada baja</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha de fin temporada baja"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Off-season - Field EndingDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1981859977 - Field 1016130111 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No</source>
+          <target state="translated">Entrada No</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Entrada No"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Off-season - Field EntryNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1981859977 - Field 2266333754 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Init Date</source>
+          <target state="translated">Fecha de inicio temporada baja</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha de inicio temporada baja"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Off-season - Field InitDate - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 2761594129 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Segmentos</source>
           <note from="Developer" annotates="general" priority="2"/>
@@ -88,6 +148,30 @@
           <source>Descripción</source>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table Segmentos - Field Descripción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1753907007 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>up-season</source>
+          <target state="translated">Fechas Temporada alta</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fechas Temporada alta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Up-season - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1753907007 - Field 3592094765 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ending Date</source>
+          <target state="translated">Fecha de fin temporada alta</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha de fin temporada alta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Up-season - Field EndingDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1753907007 - Field 1016130111 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No</source>
+          <target state="translated">Entrada No</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Entrada No"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Up-season - Field EntryNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1753907007 - Field 2266333754 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Init Date</source>
+          <target state="translated">Fecha de inicio temporada alta</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha de inicio temporada alta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Up-season - Field InitDate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Codeunit 4127894936 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
           <source>The product journal line has been posted successfully.</source>
@@ -223,6 +307,18 @@
           <target state="translated">Enviar por email</target>
           <note from="Developer" annotates="general" priority="2">ESP="Enviar por email"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Cust - Field ECOSendByemail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 296439515 - Field 2893267461 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
+          <source>Off-season Route Code</source>
+          <target state="translated">Código ruta temporada baja</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código ruta temporada baja"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Cust - Field Off-season Route Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 296439515 - Field 2661638379 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
+          <source>Up-season Route Code</source>
+          <target state="translated">Código ruta temporada alta</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código ruta temporada alta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Cust - Field Up-season Route Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3300717121 - Field 2775050013 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
           <source>AutoInvoicing</source>

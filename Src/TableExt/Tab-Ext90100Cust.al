@@ -31,6 +31,14 @@ tableextension 90100 Cust extends Customer
             TableRelation = ECOdeliverys.ECODeliveryCode;
             DataClassification = CustomerContent;
         }
+        field(90140; "Off-season Route Code"; Code[20])
+        {
+            Caption = 'Off-season Route Code', Comment = 'ESP="Código ruta temporada baja"';
+        }
+        field(90145; "Up-season Route Code"; Code[20])
+        {
+            Caption = 'Up-season Route Code', Comment = 'ESP="Código ruta temporada alta"';
+        }
 
     }
 }
