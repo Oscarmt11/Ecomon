@@ -25,5 +25,15 @@ tableextension 90106 "ECOSales & Receivables Setup " extends "Sales & Receivable
             Caption = 'Journal Batch Name', Comment = 'ESP="Nombre de la plantilla de diario"';
             TableRelation = "Item Journal Batch".Name where("Journal Template Name" = field("Journal Template Name"));
         }
+        field(90120; ECOSubjetEmailInvoices; Text[100])
+        {
+            Caption = 'Subjet Email Invoices', Comment = 'ESP="Cuerpo email Facturas"';
+            DataClassification = ToBeClassified;
+        }
+        field(90125; EcoBodyEmailInvoices; Text[2000])
+        {
+            Caption = 'Body invoices', Comment = 'ESP="Cuerpo del mensaje Facturas"';
+            DataClassification = ToBeClassified;
+        }
     }
 }
