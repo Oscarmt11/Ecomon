@@ -33,6 +33,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Cambio de código repartidor"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ECOPostedSalesShipments - Action ChangeDeliveryCode - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 2785192472 - Field 3457007009 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Off-season stock</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Stock temporada baja"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECoItem - Field Off-season stock - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2785192472 - Field 2983589815 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Off-season stock</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Stock temporada alta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECoItem - Field Up-season stock - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3109311650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Deliverys</source>
           <note from="Developer" annotates="general" priority="2">ESP="Repartidores"</note>
@@ -97,6 +107,11 @@
           <source>Deliverys</source>
           <note from="Developer" annotates="general" priority="2">ESP="Repartidores"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page ECOdeliverys - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3109311650 - Action 1891318148 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Update valyues for off-season items</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Actualizar valores para artículos fuera de temporada"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ECOdeliverys - Action CopyAtachment - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 356478432 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>ECOPostedSalesShipmentEdit</source>
