@@ -38,6 +38,18 @@
           <note from="Developer" annotates="general" priority="2">ESP="Cambio de código repartidor"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ECOPostedSalesShipments - Action ChangeDeliveryCode - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 2785192472 - Field 3457007009 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Off-season stock</source>
+          <target state="translated">Stock temporada baja</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Stock temporada baja"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECoItem - Field Off-season stock - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2785192472 - Field 2983589815 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Off-season stock</source>
+          <target state="translated">Stock temporada alta</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Stock temporada alta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECoItem - Field Up-season stock - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3109311650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Deliverys</source>
           <target state="translated">Repartidores</target>
@@ -113,6 +125,12 @@
           <note from="Developer" annotates="general" priority="2">ESP="Repartidores"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page ECOdeliverys - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3109311650 - Action 1891318148 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Update valyues for off-season items</source>
+          <target state="translated">Actualizar valores para artículos fuera de temporada</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Actualizar valores para artículos fuera de temporada"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ECOdeliverys - Action CopyAtachment - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 356478432 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>ECOPostedSalesShipmentEdit</source>
           <note from="Developer" annotates="general" priority="2"/>
@@ -157,6 +175,11 @@
           <source> </source>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page EcoRoutes - Control EcoRouteDescription - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3844624657 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ECOSalesInvoiceHeader</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ECOSalesInvoiceHeader - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3085577922 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>ECOSalesShipmentHeader</source>
@@ -289,11 +312,23 @@
           <note from="Developer" annotates="general" priority="2">ESP="Cuerpo del mensaje"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECOSales &amp; Receivables Setup  - Field EcoBodyEmail - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 717957521 - Field 3555783777 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Body invoices</source>
+          <target state="translated">Cuerpo del mensaje Facturas</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cuerpo del mensaje Facturas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECOSales &amp; Receivables Setup  - Field EcoBodyEmailInvoices - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 717957521 - Field 226045222 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
           <source>Subjet Email</source>
           <target state="translated">Cuerpo email</target>
           <note from="Developer" annotates="general" priority="2">ESP="Cuerpo email"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECOSales &amp; Receivables Setup  - Field ECOSubjetEmail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 717957521 - Field 4149441196 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Subjet Email Invoices</source>
+          <target state="translated">Cuerpo email Facturas</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cuerpo email Facturas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECOSales &amp; Receivables Setup  - Field ECOSubjetEmailInvoices - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 717957521 - Field 2704330142 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
           <source>Journal Batch Name</source>
@@ -349,17 +384,58 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesInvHeader - Field Código Segmentación - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 4266627282 - Field 1060187728 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Error enviar email</source>
+          <target state="translated">Error enviar email</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Error enviar email"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesInvHeader - Field ECNEmailError - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4266627282 - Field 3952077720 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Email sent</source>
+          <target state="translated">Email enviado</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Email enviado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesInvHeader - Field ECNEmailSentDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4266627282 - Field 2778022629 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Email sent</source>
+          <target state="translated">Email enviado</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Email enviado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesInvHeader - Field ECNSEmailSent - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4266627282 - Field 3075540509 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>ECNSing</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesInvHeader - Field ECNSing - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4266627282 - Field 20559214 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Signed</source>
+          <target state="translated">Firmado</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Firmado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesInvHeader - Field ECNSinged - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 4266627282 - Field 249624804 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
           <source>Delivery code</source>
           <target state="translated">Código  repartidor</target>
           <note from="Developer" annotates="general" priority="2">ESP="Código  repartidor"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesInvHeader - Field ECOdeliveryCode - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 4266627282 - Field 3297235660 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Observaciones</source>
+          <target state="translated">Observaciones</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Observaciones"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesInvHeader - Field ECOObservations - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 4266627282 - Field 3627794495 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
           <source>Routes</source>
           <target state="translated">Rutas repartidores</target>
           <note from="Developer" annotates="general" priority="2">ESP="Rutas repartidores"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesInvHeader - Field ECORouteCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4266627282 - Field 4233884678 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Send by email</source>
+          <target state="translated">Enviar por email</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Enviar por email"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesInvHeader - Field ECOSendByemail - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1492289237 - Field 870350816 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3399585325">
           <source>Responsable</source>
