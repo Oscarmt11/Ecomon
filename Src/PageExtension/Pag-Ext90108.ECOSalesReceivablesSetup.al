@@ -12,6 +12,14 @@ pageextension 90108 "ECOSales & Receivables Setup" extends "Sales & Receivables 
             {
                 ApplicationArea = all;
             }
+            field(EcoBodyEmailInvoices; rec.EcoBodyEmailInvoices)
+            {
+                ApplicationArea = all;
+            }
+            field(ECOSubjetEmailInvoices; rec.ECOSubjetEmailInvoices)
+            {
+                ApplicationArea = all;
+            }
         }
         addlast(General)
         {
