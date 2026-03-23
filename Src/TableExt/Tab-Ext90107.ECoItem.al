@@ -17,4 +17,5 @@ tableextension 90107 ECoItem extends Item
             DataClassification = CustomerContent;
         }
     }
+
 }
