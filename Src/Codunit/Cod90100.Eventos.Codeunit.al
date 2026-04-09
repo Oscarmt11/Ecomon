@@ -184,8 +184,8 @@ codeunit 90100 Eventos
                         if MovAlmacen.FindLast() then
                             ItemJournalLine.Validate("Bin Code", MovAlmacen."Bin Code");
 
-                        ItemJournalLine.Validate(Quantity, -StockActual);
-                        ItemJournalLine."Document No." := 'VACIAR-STOCK-' + Format(Today, 0, '<Year4><Month,2><Day,2>');
+                        ItemJournalLine.Validate(Quantity, StockActual);
+                        ItemJournalLine."Document No." := Format(Today, 0, '<Year4><Month,2><Day,2>');
                         ItemJournalLine.Description := 'Vaciar stock desde' + ' - ' + Format(Today);
                         ItemJournalLine.Insert(true);
                     end;
@@ -194,5 +194,36 @@ codeunit 90100 Eventos
         end;
     end;
 
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Item Jnl.-Post Line", 'OnInsertItemLedgEntryOnBeforeVerifyOnInventory', '', false, false)]
+    local procedure OnInsertItemLedgEntryOnBeforeVerifyOnInventory(ItemJnlLine: Record "Item Journal Line"; ItemLedgEntry: Record "Item Ledger Entry"; var IsHandled: Boolean)
+    begin
+        If ItemJnlLine.Description = 'Vaciar stock desde' + ' - ' + Format(Today) then
+            IsHandled := true;
+    end;
 
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Whse. Jnl.-Register Line", 'OnDeleteFromBinContentOnBeforeFieldError', '', false, false)]
+    local procedure OnDeleteFromBinContentOnBeforeFieldError(BinContent: Record "Bin Content"; WarehouseEntry: Record "Warehouse Entry"; var IsHandled: Boolean)
+    begin
+        IsHandled := true;
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Whse. Jnl.-Register Line", 'OnBeforeDeleteFromBinContent', '', false, false)]
+    local procedure OnBeforeDeleteFromBinContent(var WarehouseEntry: Record "Warehouse Entry"; var IsHandled: Boolean)
+    var
+        FromBinContent: Record "Bin Content";
+    begin
+        FromBinContent.ReadIsolation(IsolationLevel::Readcommitted);
+        if not FromBinContent.Get(
+            WarehouseEntry."Location Code", WarehouseEntry."Bin Code", WarehouseEntry."Item No.", WarehouseEntry."Variant Code",
+            WarehouseEntry."Unit of Measure Code") then begin
+            FromBinContent.Init;
+            FromBinContent."Location Code" := WarehouseEntry."Location Code";
+            FromBinContent."Bin Code" := WarehouseEntry."Bin Code";
+            FromBinContent."Item No." := WarehouseEntry."Item No.";
+            FromBinContent."Variant Code" := WarehouseEntry."Variant Code";
+            FromBinContent."Unit of Measure Code" := WarehouseEntry."Unit of Measure Code";
+            FromBinContent.Insert();
+            commit;
+        end
+    end;
 }

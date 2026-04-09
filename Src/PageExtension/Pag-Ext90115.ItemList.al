@@ -71,8 +71,6 @@ pageextension 90115 ItemListExt extends "Item List"
                     If Confirm(
                         StrSubstNo('¿Desea borrar el stock actual de productos no bloqueados'),
                         false) Then begin
-
-                        // Llamar a la función de copiar stock
                         Sincroniza.VaciarStock();
                         Message('Stock copiado correctamente a la empresa %1. Revise el diario de artículos para registrar las entradas.', EmpresaDestino);
                     end;
