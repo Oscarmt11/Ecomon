@@ -62,6 +62,21 @@ tableextension 90105 ECNSalesShipmentHeader extends "Sales Shipment Header"
             FieldClass = FlowField;
             CalcFormula = lookup(Customer."Combine Shipments" where("No." = FIELD("Sell-to Customer No.")));
         }
+        field(90140; ECOSignerName; Text[100])
+        {
+            Caption = 'Signer name', Comment = 'ESP="Nombre firmante"';
+            DataClassification = CustomerContent;
+        }
+        field(90141; ECOSignerSurname; Text[100])
+        {
+            Caption = 'Signer surname', Comment = 'ESP="Apellidos firmante"';
+            DataClassification = CustomerContent;
+        }
+        field(90142; ECOSignerDni; Text[20])
+        {
+            Caption = 'Signer ID', Comment = 'ESP="DNI/NIE firmante"';
+            DataClassification = CustomerContent;
+        }
     }
     // var
     //     TentMedia: Record "Tenant Media";

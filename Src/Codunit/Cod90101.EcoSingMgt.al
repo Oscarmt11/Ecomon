@@ -15,7 +15,8 @@ codeunit 90101 EcoSingMgt
     // ------------------------------------
     // ALBARÁN: firma y envío por email
     // ------------------------------------
-    procedure InsertSing(ShippingNo: Text[20]; SingNo: Text; Observations: Text): Text
+
+    procedure InsertSing(ShippingNo: Text[20]; SingNo: Text; Observations: Text; SignerName: Text; SignerSurname: Text; SignerDni: Text): Text
     var
         TempBlob: Codeunit "Temp Blob";
         Base64: Codeunit "Base64 Convert";
@@ -33,6 +34,9 @@ codeunit 90101 EcoSingMgt
         SalesShipmentHeader.ECNSing.ImportStream(InStr, '*.png');
         SalesShipmentHeader.Validate(ECNSinged, true);
         SalesShipmentHeader.Validate(ECOObservations, Observations);
+        SalesShipmentHeader.Validate(ECOSignerName, CopyStr(SignerName, 1, MaxStrLen(SalesShipmentHeader.ECOSignerName)));
+        SalesShipmentHeader.Validate(ECOSignerSurname, CopyStr(SignerSurname, 1, MaxStrLen(SalesShipmentHeader.ECOSignerSurname)));
+        SalesShipmentHeader.Validate(ECOSignerDni, CopyStr(SignerDni, 1, MaxStrLen(SalesShipmentHeader.ECOSignerDni)));
         SalesShipmentHeader.Modify(true);
 
         SalesShipmentHeader.CalcFields(ECOSendByemail);
@@ -126,6 +130,11 @@ codeunit 90101 EcoSingMgt
     // (DUPLICADO PARA "Sales Invoice Header")
     // ------------------------------------
     procedure InsertSingInvoice(InvoiceNo: Text[20]; SingNo: Text; Observations: Text): Text
+    begin
+        exit(InsertSingInvoice(InvoiceNo, SingNo, Observations, '', '', ''));
+    end;
+
+    procedure InsertSingInvoice(InvoiceNo: Text[20]; SingNo: Text; Observations: Text; SignerName: Text; SignerSurname: Text; SignerDni: Text): Text
     var
         TempBlob: Codeunit "Temp Blob";
         Base64: Codeunit "Base64 Convert";
@@ -143,6 +152,9 @@ codeunit 90101 EcoSingMgt
         SalesInvoiceHeader.ECNSing.ImportStream(InStr, '*.png');
         SalesInvoiceHeader.Validate(ECNSinged, true);
         SalesInvoiceHeader.Validate(ECOObservations, Observations);
+        SalesInvoiceHeader.Validate(ECOSignerName, CopyStr(SignerName, 1, MaxStrLen(SalesInvoiceHeader.ECOSignerName)));
+        SalesInvoiceHeader.Validate(ECOSignerSurname, CopyStr(SignerSurname, 1, MaxStrLen(SalesInvoiceHeader.ECOSignerSurname)));
+        SalesInvoiceHeader.Validate(ECOSignerDni, CopyStr(SignerDni, 1, MaxStrLen(SalesInvoiceHeader.ECOSignerDni)));
         SalesInvoiceHeader.Modify(true);
 
         SalesInvoiceHeader.CalcFields(ECOSendByemail);

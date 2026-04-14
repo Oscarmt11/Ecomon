@@ -4372,7 +4372,10 @@ Cstr(Fields!PostingDate_SalesInvHdr.Value) + Chr(177) +
 Cstr(Fields!BilltoCustNo_SalesInvHdr.Value) + Chr(177) + 
 Cstr(Fields!SalesPurchPersonName.Value) + Chr(177) +
 Cstr(Fields!ECOdeliveryCode.Value) + Chr(177) +
-Cstr(Fields!ECORouteCode.Value) , 1)</Hidden>
+Cstr(Fields!ECORouteCode.Value) + Chr(177) +
+Cstr(Fields!ECOSignerName.Value) + Chr(177) +
+Cstr(Fields!ECOSignerSurname.Value) + Chr(177) +
+Cstr(Fields!ECOSignerDni.Value) , 1)</Hidden>
                                             </Visibility>
                                             <Style>
                                               <Border>
@@ -7033,6 +7036,15 @@ Dp5cDRMJcp9oTO+5Tny/VbGv0vtnSUZrTy5gxOBNet8G+XPpvRS6E+MVsRDUe6VQR+4EYxvjUxUX+8tG
         </Field>
         <Field Name="ECORouteCode">
           <DataField>ECORouteCode</DataField>
+        </Field>
+        <Field Name="ECOSignerName">
+          <DataField>ECOSignerName</DataField>
+        </Field>
+        <Field Name="ECOSignerSurname">
+          <DataField>ECOSignerSurname</DataField>
+        </Field>
+        <Field Name="ECOSignerDni">
+          <DataField>ECOSignerDni</DataField>
         </Field>
       </Fields>
       <Query>

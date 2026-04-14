@@ -69,5 +69,20 @@ tableextension 90102 SalesInvHeader extends "Sales Invoice Header"
             TableRelation = ECOdeliverys.ECODeliveryCode;
             DataClassification = CustomerContent;
         }
+        field(90136; ECOSignerName; Text[100])
+        {
+            Caption = 'Signer name', Comment = 'ESP="Nombre firmante"';
+            DataClassification = CustomerContent;
+        }
+        field(90137; ECOSignerSurname; Text[100])
+        {
+            Caption = 'Signer surname', Comment = 'ESP="Apellidos firmante"';
+            DataClassification = CustomerContent;
+        }
+        field(90138; ECOSignerDni; Text[20])
+        {
+            Caption = 'Signer ID', Comment = 'ESP="DNI/NIE firmante"';
+            DataClassification = CustomerContent;
+        }
     }
 }

@@ -17,6 +17,15 @@ reportextension 90103 "ECOSales - Invoice - Ecomon l" extends "Sales Invoice Eco
             column(ECORouteCode; ECORouteCode)
             {
             }
+            column(ECOSignerName; "Sales Invoice Header".ECOSignerName)
+            {
+            }
+            column(ECOSignerSurname; "Sales Invoice Header".ECOSignerSurname)
+            {
+            }
+            column(ECOSignerDni; "Sales Invoice Header".ECOSignerDni)
+            {
+            }
         }
         modify("Sales Invoice Header")
         {

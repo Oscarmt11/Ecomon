@@ -288,6 +288,21 @@
           <note from="Developer" annotates="general" priority="2">ESP="Enviar por email"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECNSalesShipmentHeader - Field ECOSendByemail - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 3300717121 - Field 186402146 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
+          <source>Signer ID</source>
+          <note from="Developer" annotates="general" priority="2">ESP="DNI/NIE firmante"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECNSalesShipmentHeader - Field ECOSignerDni - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3300717121 - Field 3681053118 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
+          <source>Signer name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre firmante"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECNSalesShipmentHeader - Field ECOSignerName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3300717121 - Field 497523410 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
+          <source>Signer surname</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Apellidos firmante"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ECNSalesShipmentHeader - Field ECOSignerSurname - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 717957521 - Field 814527111 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
           <source>Body</source>
           <note from="Developer" annotates="general" priority="2">ESP="Cuerpo del mensaje"</note>
@@ -402,6 +417,21 @@
           <source>Send by email</source>
           <note from="Developer" annotates="general" priority="2">ESP="Enviar por email"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesInvHeader - Field ECOSendByemail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4266627282 - Field 186402146 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Signer ID</source>
+          <note from="Developer" annotates="general" priority="2">ESP="DNI/NIE firmante"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesInvHeader - Field ECOSignerDni - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4266627282 - Field 3681053118 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Signer name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre firmante"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesInvHeader - Field ECOSignerName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4266627282 - Field 497523410 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Signer surname</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Apellidos firmante"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesInvHeader - Field ECOSignerSurname - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1492289237 - Field 870350816 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3399585325">
           <source>Responsable</source>

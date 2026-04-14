@@ -17,6 +17,15 @@ reportextension 90101 "ECOSalesShipmentEcomon l" extends "Sales - Shipment - Eco
             column(ECORouteCode; ECORouteCode)
             {
             }
+            column(ECOSignerName; "Sales Shipment Header".ECOSignerName)
+            {
+            }
+            column(ECOSignerSurname; "Sales Shipment Header".ECOSignerSurname)
+            {
+            }
+            column(ECOSignerDni; "Sales Shipment Header".ECOSignerDni)
+            {
+            }
         }
         modify("Sales Shipment Header")
         {
